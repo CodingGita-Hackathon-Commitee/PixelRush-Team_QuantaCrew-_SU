@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOS Emergency</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fff7fb;
+            font-family: Arial, sans-serif;
+            color: #321b38;
+        }
+
+        .page {
+            width: 1200px;
+            margin: auto;
+            background: #fff7fb;
+            min-height: 100vh;
+        }
+
+        /* TOP */
+
+        .top {
+            height: 85px;
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 0 35px;
+            gap: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .back {
+            width: 55px;
+            height: 55px;
+            background: #f8e5ff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 48px;
+            font-size: 40px;
+            text-decoration: none;
+            color: #321b38;
+        }
+
+        .logo {
+            color: #d52c6b;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .user {
+            margin-left: auto;
+            width: 55px;
+            height: 55px;
+            background: #b91f5c;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 55px;
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+        /* MAIN */
+
+        .main {
+            padding: 30px 45px 50px;
+        }
+
+        /* PET */
+
+        .pet {
+            background: #f6d9fc;
+            border-radius: 40px;
+            padding: 22px 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .pet img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            margin-left: 20px;
+        }
+
+        .pet-info h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .pet-info p {
+            margin: 7px 0 0;
+            font-size: 19px;
+            color: #69596b;
+        }
+
+        .primary {
+            font-size: 16px;
+            background: #ffd9e9;
+            color: #9f2857;
+            padding: 7px 14px;
+            border-radius: 20px;
+            vertical-align: middle;
+        }
+
+        .switch {
+            margin-left: auto;
+            background: white;
+            color: #b51f5c;
+            text-decoration: none;
+            padding: 16px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+        }
+
+        /* CONTENT */
+
+        .columns {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 55%;
+        }
+
+        .right {
+            width: 45%;
+        }
+
+        /* HEADINGS */
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .head h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .change {
+            color: #c02565;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sub {
+            margin: 5px 0 18px;
+            font-size: 18px;
+            color: #6d5b67;
+        }
+
+        /* CLINIC */
+
+        .clinic {
+            background: white;
+            border-radius: 35px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 10px #eee;
+            margin-bottom: 35px;
+        }
+
+        .clinic img {
+            width: 125px;
+            height: 115px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .clinic-info {
+            margin-left: 22px;
+        }
+
+        .clinic-info h2 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .clinic-info p {
+            margin: 10px 0;
+            color: #6d5b67;
+            font-size: 17px;
+        }
+
+        .rating {
+            background: #f7e2ff;
+            color: #b51f5c;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+
+        .lead {
+            color: #c12665 !important;
+        }
+
+        /* SERVICES */
+
+        .selected {
+            background: #ffd9e8;
+            padding: 10px 17px;
+            border-radius: 25px;
+            color: #7b214b;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .service {
+            width: calc(50% - 9px);
+            height: 190px;
+            box-sizing: border-box;
+            padding: 22px;
+            background: white;
+            border-radius: 35px;
+            text-decoration: none;
+            color: #321b38;
+            box-shadow: 0 3px 10px #eee;
+        }
+
+        .service.active {
+            background: #bd205e;
+            color: white;
+        }
+
+        .circle {
+            width: 52px;
+            height: 52px;
+            background: #f8e4ff;
+            color: #bf2161;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 52px;
+            font-size: 23px;
+        }
+
+        .active .circle {
+            background: #d14b79;
+            color: white;
+        }
+
+        .service h2 {
+            margin-top: 38px;
+            margin-bottom: 10px;
+            font-size: 23px;
+            font-weight: normal;
+        }
+
+        .service p {
+            margin: 0;
+            font-size: 17px;
+            color: #6d5b67;
+        }
+
+        .active p {
+            color: white;
+        }
+
+        .price {
+            float: right;
+            font-size: 22px;
+            color: #bd205e;
+            font-weight: bold;
+        }
+
+        .active .price {
+            color: white;
+        }
+
+        /* VETERINARIANS */
+
+        .vet {
+            background: white;
+            border-radius: 35px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 10px #eee;
+        }
+
+        .selected-vet {
+            border: 3px solid #bd205e;
+        }
+
+        .vet img {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .vet-info {
+            margin-left: 20px;
+        }
+
+        .vet-info h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .vet-info p {
+            margin: 6px 0;
+            color: #6d5b67;
+            font-size: 16px;
+        }
+
+        .available {
+            display: inline-block;
+            background: #ffdce9;
+            color: #ad2860;
+            padding: 8px 13px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .next {
+            display: inline-block;
+            background: #f5e4ff;
+            padding: 8px 13px;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .check {
+            margin-left: auto;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #bd205e;
+            color: white;
+            text-align: center;
+            line-height: 42px;
+            font-size: 22px;
+        }
+
+        /* TOTAL */
+
+        .total {
+            background: #f6dcfc;
+            border-radius: 35px;
+            padding: 23px;
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .total-icon {
+            font-size: 30px;
+            margin-right: 18px;
+        }
+
+        .total p {
+            margin: 0;
+            color: #6d5b67;
+            font-size: 17px;
+        }
+
+        .total h2 {
+            margin: 5px 0 0;
+            font-size: 28px;
+        }
+
+        .cancel {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .cancel b {
+            color: #c02162;
+            font-size: 17px;
+        }
+
+        /* DATE BUTTON */
+
+        .date {
+            display: block;
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 35px;
+            background: #ff5b87;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 21px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px #ffd0dd;
+        }
+
+        .safe {
+            text-align: center;
+            margin-top: 18px;
+            color: #65545f;
+            font-size: 16px;
+        }
+
+        .safe b {
+            color: #bd205e;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- TOP BAR -->
+
+    <div class="top">
+
+        <a class="back" href="5_home.html">‹</a>
+
+        <span class="logo">🐾 PawPal</span>
+
+        <span class="title">SOS Emergency</span>
+
+        <a class="user" href="4_profile.html">♙</a>
+
+    </div>
+
+
+    <div class="main">
+
+        <!-- PET -->
+
+        <div class="pet">
+
+            <img src="dog.png">
+
+            <div class="pet-info">
+
+                <h1>
+                    Buddy
+                    <span class="primary">Primary</span>
+                </h1>
+
+                <p>Golden Retriever • 7 mos</p>
+
+            </div>
+
+            <a class="switch" href="4_profile.html">
+                Switch⌄
+            </a>
+
+        </div>
+
+
+        <div class="columns">
+
+            <!-- LEFT SIDE -->
+
+            <div class="left">
+
+                <!-- CLINIC -->
+
+                <div class="head">
+
+                    <h2>Chosen Clinic</h2>
+
+                    <a class="change" href="7_checkup.html">
+                        Change
+                    </a>
+
+                </div>
+
+
+                <div class="clinic">
+
+                    <img src="doctor.png">
+
+                    <div class="clinic-info">
+
+                        <h2>
+                            Stravet Animal Clinic
+                            <span class="rating">★ 4.9</span>
+                        </h2>
+
+                        <p>
+                            ⌖ 0.8 miles away • Open today till 7 PM
+                        </p>
+
+                        <p class="lead">
+                            ● Lead: Dr. Emily Smith & Associates
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="head">
+
+                    <div>
+
+                        <h2>Select Service</h2>
+
+                        <p class="sub">
+                            Tap to pick treatment for Buddy
+                        </p>
+
+                    </div>
+
+                    <span class="selected">
+                        1 selected
+                    </span>
+
+                </div>
+
+
+                <div class="services">
+
+                    <a class="service active"
+                       href="17_book_appointment.html">
+
+                        <div class="circle">✚</div>
+
+                        <h2>Routine Wellness</h2>
+
+                        <p>
+                            Full Checkup
+                            <span class="price">$45</span>
+                        </p>
+
+                    </a>
+
+
+                    <a class="service"
+                       href="17_book_appointment.html">
+
+                        <div class="circle">💉</div>
+
+                        <h2>Rabies Booster</h2>
+
+                        <p>
+                            Annual shot
+                            <span class="price">$25</span>
+                        </p>
+
+                    </a>
+
+
+                    <a class="service"
+                       href="17_book_appointment.html">
+
+                        <div class="circle">🦷</div>
+
+                        <h2>Dental Cleaning</h2>
+
+                        <p>
+                            Tartar care
+                            <span class="price">$60</span>
+                        </p>
+
+                    </a>
+
+
+                    <a class="service"
+                       href="17_book_appointment.html">
+
+                        <div class="circle">✂</div>
+
+                        <h2>Nail & Groom</h2>
+
+                        <p>
+                            Paw pamper
+                            <span class="price">$20</span>
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="right">
+
+                <!-- VETERINARIANS -->
+
+                <div class="head">
+
+                    <div>
+
+                        <h2>Available Veterinarians</h2>
+
+                        <p class="sub">
+                            Select who will care for Buddy
+                        </p>
+
+                    </div>
+
+                    <span class="selected">
+                        Any Vet
+                    </span>
+
+                </div>
+
+
+                <!-- DOCTOR 1 -->
+
+                <div class="vet selected-vet">
+
+                    <img src="doctor.png">
+
+                    <div class="vet-info">
+
+                        <h2>
+                            Dr. Emily Smith ✿
+                        </h2>
+
+                        <p>
+                            Canine Specialist & Wellness
+                        </p>
+
+                        <span class="available">
+                            Available Today
+                        </span>
+
+                        ★ 4.9 (142 reviews)
+
+                    </div>
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <!-- DOCTOR 2 -->
+
+                <div class="vet">
+
+                    <img src="doctor.png">
+
+                    <div class="vet-info">
+
+                        <h2>
+                            Dr. Julian Vance ✿
+                        </h2>
+
+                        <p>
+                            Vaccines, Surgery & Diagnostics
+                        </p>
+
+                        <span class="next">
+                            Next: Tomorrow 10 AM
+                        </span>
+
+                        ★ 4.8 (98 reviews)
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="total">
+
+                    <div class="total-icon">
+                        🧾
+                    </div>
+
+                    <div>
+
+                        <p>Estimated Total</p>
+
+                        <h2>$45.00</h2>
+
+                    </div>
+
+                    <div class="cancel">
+
+                        <b>Free cancellation</b>
+
+                        <p>Up to 2h before</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE -->
+
+                <a class="date" href="11_dates.html">
+                    Select Date & Time →
+                </a>
+
+
+                <div class="safe">
+                    <b>♥</b>
+                    Safe, certified care tailored for playful companions
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
