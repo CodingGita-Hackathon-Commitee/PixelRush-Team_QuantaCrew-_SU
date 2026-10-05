@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearby Clinic</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fffafa;
+            font-family: Arial, sans-serif;
+            color: #211b20;
+        }
+
+        .page {
+            width: 1100px;
+            margin: auto;
+            padding: 100px 0 60px;
+        }
+
+        /* TOP */
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .step {
+            background: #ffd9e5;
+            color: #4d0929;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .steps {
+            display: flex;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #b52562;
+        }
+
+        .last {
+            width: 70px;
+            border-radius: 20px;
+        }
+
+        /* HEADING */
+
+        .heading {
+            margin-top: 55px;
+        }
+
+        .heading h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+
+        .heading p {
+            font-size: 28px;
+            color: #654e58;
+            margin: 0;
+        }
+
+        /* MAIN CARD */
+
+        .main {
+            background: white;
+            margin-top: 55px;
+            padding: 40px;
+            border-radius: 55px;
+            box-shadow: 0 5px 15px #ddd;
+        }
+
+        /* PET */
+
+        .pet {
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .pet-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            margin-left: 30px;
+        }
+
+        .pet-info h2 {
+            margin: 0 0 10px;
+            font-size: 36px;
+        }
+
+        .pet-info p {
+            margin: 0;
+            font-size: 25px;
+            color: #654e58;
+        }
+
+        .verified {
+            background: #58e2d5;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 21px;
+            margin-left: 10px;
+        }
+
+        .fast {
+            margin-left: auto;
+            background: #ffdce7;
+            color: #5a092f;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        /* INFO BOX */
+
+        .info-box {
+            margin-top: 30px;
+            background: #f5f3f3;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #ffd8d8;
+            text-align: center;
+            line-height: 65px;
+            font-size: 30px;
+            margin-right: 25px;
+        }
+
+        .info-text {
+            flex: 1;
+        }
+
+        .info-text h3 {
+            margin: 0 0 7px;
+            font-size: 26px;
+        }
+
+        .info-text p {
+            margin: 0;
+            font-size: 22px;
+            color: #654e58;
+        }
+
+        .alert {
+            color: #c51e2c;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .gps .info-icon {
+            background: #e5dcff;
+        }
+
+        .live {
+            color: #007d76;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        /* MAP */
+
+        .map {
+            height: 300px;
+            margin-top: 30px;
+            background-image:
+                url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1000");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .map-text {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            background: rgba(0,0,0,0.45);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .dispatch {
+            background: white;
+            color: #222;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        /* READY */
+
+        .ready {
+            margin-top: 30px;
+            padding: 20px;
+            background: #d8faf7;
+            display: flex;
+            align-items: center;
+            font-size: 23px;
+        }
+
+        .numbers {
+            display: flex;
+            margin-right: 25px;
+        }
+
+        .number {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 55px;
+            margin-right: -8px;
+            font-size: 20px;
+        }
+
+        .one {
+            background: #007d76;
+        }
+
+        .two {
+            background: #6252aa;
+        }
+
+        .three {
+            background: #b52562;
+        }
+
+        .badge {
+            margin-left: auto;
+            color: #007d76;
+            font-size: 30px;
+        }
+
+        /* SEND */
+
+        .complete {
+            text-align: center;
+            margin: 65px 0 45px;
+            font-size: 25px;
+            color: #654e58;
+        }
+
+        .complete span {
+            color: #007d76;
+            font-weight: bold;
+        }
+
+        .send {
+            display: block;
+            background: #ff6095;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 30px;
+            border-radius: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 10px 20px #ffd2df;
+        }
+
+        /* HELP */
+
+        .help {
+            margin: 45px auto 0;
+            width: 80%;
+            background: #f0eeee;
+            padding: 18px;
+            border-radius: 40px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .help a {
+            color: #b52562;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- STEP -->
+
+    <div class="top">
+
+        <div class="step">
+            ✓ &nbsp; TAP 4 OF 4 — FINAL STEP
+        </div>
+
+        <div class="steps">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot last"></div>
+        </div>
+
+    </div>
+
+
+    <!-- HEADING -->
+
+    <div class="heading">
+
+        <h1>
+            Ready to Alert Clinics 🐾
+        </h1>
+
+        <p>
+            Review the quick summary and broadcast in 1 tap.
+        </p>
+
+    </div>
+
+
+    <!-- MAIN CARD -->
+
+    <div class="main">
+
+        <!-- PET -->
+
+        <div class="pet">
+
+            <img
+                class="pet-img"
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=300"
+            >
+
+            <div class="pet-info">
+
+                <h2>
+                    Mojo
+
+                    <span class="verified">
+                        ✓ Verified Pet
+                    </span>
+                </h2>
+
+                <p>
+                    Golden Retriever • 3 yrs • 31 kg
+                </p>
+
+            </div>
+
+            <div class="fast">
+                Fast-Triage
+            </div>
+
+        </div>
+
+
+        <!-- TOXIC ALERT -->
+
+        <div class="info-box">
+
+            <div class="info-icon">
+                ⚠
+            </div>
+
+            <div class="info-text">
+
+                <h3>
+                    Ate Something
+                </h3>
+
+                <p>
+                    Possible toxic plant/substance ingestion...
+                </p>
+
+            </div>
+
+            <div class="alert">
+                TOXIC ALERT
+            </div>
+
+        </div>
+
+
+        <!-- GPS -->
+
+        <div class="info-box gps">
+
+            <div class="info-icon">
+                ●
+            </div>
+
+            <div class="info-text">
+
+                <h3>
+                    Auto-detected GPS
+                </h3>
+
+                <p>
+                    Near 4th & Elmcrest (0.5 km away)
+                </p>
+
+            </div>
+
+            <div class="live">
+                ● Live Lock
+            </div>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <div class="map">
+
+            <div class="map-text">
+
+                <span>
+                    📍 3 Clinics on High Standby
+                </span>
+
+                <span class="dispatch">
+                    &lt; 4 min dispatch
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- READY -->
+
+        <div class="ready">
+
+            <div class="numbers">
+
+                <div class="number one">
+                    1
+                </div>
+
+                <div class="number two">
+                    2
+                </div>
+
+                <div class="number three">
+                    3
+                </div>
+
+            </div>
+
+            Ready to receive Mojo's profile
+
+            <div class="badge">
+                ⚙
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COMPLETE -->
+
+    <div class="complete">
+
+        <span>✓</span>
+        4 taps complete • No typing needed
+
+    </div>
+
+
+    <!-- SEND HELP -->
+
+    <a href="12_reach.html" class="send">
+        ✱ &nbsp; Send Help 🐾
+    </a>
+
+
+    <!-- HELP -->
+
+    <div class="help">
+
+        📞 &nbsp;
+        Need immediate voice guidance?
+
+        <a href="12_reach.html">
+            Call 24/7 Helpline
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
