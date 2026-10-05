@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmed</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fff7fb;
+            font-family: Arial, sans-serif;
+            color: #321b38;
+        }
+
+        .page {
+            width: 1200px;
+            margin: auto;
+            min-height: 100vh;
+            background: #fff7fb;
+        }
+
+        /* TOP */
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 45px;
+        }
+
+        .logo {
+            background: #fdeaff;
+            color: #bd205e;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .close {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #fcecff;
+            text-align: center;
+            line-height: 52px;
+            font-size: 32px;
+            color: #5d4c59;
+            text-decoration: none;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 15px 100px 30px;
+        }
+
+        .dog {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #ffd8e7;
+            box-shadow: 0 5px 15px #ead8df;
+        }
+
+        .confirmed {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffdce8;
+            color: #59122f;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            margin: 25px 0 15px;
+            font-size: 43px;
+        }
+
+        .hero p {
+            margin: 0 auto;
+            max-width: 750px;
+            font-size: 21px;
+            line-height: 1.5;
+            color: #685761;
+        }
+
+        .email {
+            color: #bd205e;
+            font-weight: bold;
+        }
+
+        /* BOOKING CARD */
+
+        .booking {
+            width: 850px;
+            margin: 20px auto 35px;
+            padding: 30px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 3px 12px #eee;
+        }
+
+        .ref {
+            padding: 15px 20px;
+            background: #fbeaff;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+
+        .ref b {
+            color: #bd205e;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            padding: 22px 5px;
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #f8ddff;
+            color: #bd205e;
+            text-align: center;
+            line-height: 55px;
+            font-size: 25px;
+            margin-right: 20px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .label {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: #6b5965;
+        }
+
+        .value {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .small {
+            margin-top: 5px;
+            font-size: 18px;
+            color: #685761;
+        }
+
+        .pink {
+            color: #bd205e;
+        }
+
+        .paid {
+            background: #fbeaff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .paid .amount {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .amount b {
+            font-size: 30px;
+            color: #bd205e;
+        }
+
+        /* ACTIONS */
+
+        .actions {
+            width: 910px;
+            margin: auto;
+        }
+
+        .actions h2 {
+            font-size: 24px;
+            color: #62515d;
+        }
+
+        .action {
+            background: white;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 7px #eee;
+        }
+
+        .action-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f8ddff;
+            color: #bd205e;
+            text-align: center;
+            line-height: 50px;
+            font-size: 23px;
+            margin-right: 20px;
+        }
+
+        .action h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .action p {
+            margin: 6px 0 0;
+            color: #685761;
+            font-size: 17px;
+        }
+
+        .arrow {
+            margin-left: auto;
+            font-size: 28px;
+        }
+
+        /* CHECKLIST */
+
+        .checklist {
+            background: #fceaff;
+            padding: 25px 30px;
+            margin-top: 15px;
+        }
+
+        .checklist h2 {
+            margin: 0 0 15px;
+            font-size: 23px;
+        }
+
+        .checklist p {
+            margin: 10px 0;
+            color: #685761;
+            font-size: 18px;
+        }
+
+        .checklist p::first-letter {
+            color: #ff5b87;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            width: 910px;
+            margin: 40px auto;
+        }
+
+        .return {
+            display: block;
+            padding: 20px;
+            border-radius: 40px;
+            background: #ff5b87;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px #ffd0dd;
+        }
+
+        .pass {
+            display: block;
+            margin-top: 18px;
+            padding: 20px;
+            border-radius: 40px;
+            background: #fceaff;
+            color: #bd205e;
+            text-align: center;
+            text-decoration: none;
+            font-size: 21px;
+        }
+
+        .bottom-space {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- TOP -->
+
+    <div class="top">
+
+        <div class="logo">
+            🐾 PawPal Care
+        </div>
+
+        <a class="close" href="5_home.html">
+            ×
+        </a>
+
+    </div>
+
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <img class="dog" src="dog.png">
+
+        <br>
+
+        <div class="confirmed">
+            ✓ BOOKING CONFIRMED
+        </div>
+
+        <h1>
+            Buddy is All Booked &<br>
+            Happy!
+        </h1>
+
+        <p>
+            We've sent the digital pass and visit prep
+            instructions to
+            <span class="email">
+                alex.johnson@email.com
+            </span>
+        </p>
+
+    </div>
+
+
+    <!-- BOOKING DETAILS -->
+
+    <div class="booking">
+
+        <div class="ref">
+
+            <span>
+                🧾 &nbsp; Ref Code
+            </span>
+
+            <b>
+                #PWP-89241-SUCCESS
+            </b>
+
+        </div>
+
+
+        <!-- SERVICE -->
+
+        <div class="row">
+
+            <div class="icon">
+                ✚
+            </div>
+
+            <div class="info">
+
+                <p class="label">
+                    Scheduled Service
+                </p>
+
+                <p class="value">
+                    Annual Wellness & Rabies Booster
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLINIC -->
+
+        <div class="row">
+
+            <div class="icon">
+                ✚
+            </div>
+
+            <div class="info">
+
+                <p class="label">
+                    Care Center
+                </p>
+
+                <p class="value">
+                    Stravet Animal Clinic
+                </p>
+
+                <p class="small">
+                    Dr. Emily Smith, DVM • Examination Room 3
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="row">
+
+            <div class="icon">
+                📅
+            </div>
+
+            <div class="info">
+
+                <p class="label">
+                    Appointment Time
+                </p>
+
+                <p class="value">
+                    Thursday, Oct 16, 2025
+                </p>
+
+                <p class="small pink">
+                    10:30 AM – 11:15 AM (45 min)
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="paid">
+
+            <div class="icon">
+                ▣
+            </div>
+
+            <div class="info">
+
+                <p class="value">
+                    Total Paid
+                </p>
+
+            </div>
+
+            <div class="amount">
+
+                <b>
+                    $45.00
+                </b>
+
+                <p class="small">
+                    Apple Pay • Auth 8892
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SMART ACTIONS -->
+
+    <div class="actions">
+
+        <h2>
+            Smart Actions & Prep
+        </h2>
+
+
+        <div class="action">
+
+            <div class="action-icon">
+                📅
+            </div>
+
+            <div>
+
+                <h3>
+                    Add to Apple / Google Calendar
+                </h3>
+
+                <p>
+                    Includes reminder 2 hours prior
+                </p>
+
+            </div>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </div>
+
+
+        <div class="action">
+
+            <div class="action-icon">
+                ➤
+            </div>
+
+            <div>
+
+                <h3>
+                    Directions & Parking Guide
+                </h3>
+
+                <p>
+                    0.8 mi away • Reserved Pet P-Spot
+                </p>
+
+            </div>
+
+            <span class="arrow">
+                ›
+            </span>
+
+        </div>
+
+
+        <!-- CHECKLIST -->
+
+        <div class="checklist">
+
+            <h2>
+                ☷ &nbsp; Pre-Visit Buddy Checklist
+            </h2>
+
+            <p>
+                • &nbsp; Bring Buddy's favorite comfort squeaky toy
+            </p>
+
+            <p>
+                • &nbsp; Hold food/kibble 2 hours prior to visit
+            </p>
+
+            <p>
+                • &nbsp; Have prior vaccine records auto-synced
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+        <a class="return" href="5_home.html">
+            Return to Pet Care Hub 🐾
+        </a>
+
+        <a class="pass" href="18_history.html">
+            ▣ &nbsp; View Digital Pass & Receipt
+        </a>
+
+    </div>
+
+
+    <div class="bottom-space"></div>
+
+</div>
+
+</body>
+</html>
