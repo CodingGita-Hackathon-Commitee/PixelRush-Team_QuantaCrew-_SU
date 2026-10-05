@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account - PawPal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.head {
+    width: 900px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ff5785;
+    font-size: 18px;
+}
+
+.head h1 {
+    margin-left: 30px;
+    font-size: 42px;
+}
+
+.club {
+    margin-left: auto;
+    text-decoration: none;
+    background: #f9d9ed;
+    color: #b72561;
+    padding: 15px 30px;
+    border-radius: 35px;
+    font-size: 20px;
+}
+
+
+.welcome {
+    width: 820px;
+    margin: 30px auto 60px;
+    padding: 30px;
+    background: #fceafa;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.welcome img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome h2 {
+    background: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin: 0;
+}
+
+.welcome p {
+    font-size: 22px;
+    color: #62545b;
+}
+
+
+.signup {
+    width: 900px;
+    margin: auto;
+}
+
+.signup h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.sub {
+    font-size: 25px;
+    color: #62545b;
+    margin-bottom: 50px;
+}
+
+.signup label {
+    display: block;
+    font-size: 21px;
+    color: #62545b;
+    margin: 30px 10px 10px;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px 30px;
+    border: none;
+    border-radius: 45px;
+    background: white;
+    font-size: 21px;
+    box-shadow: 0 2px 6px #eadde3;
+}
+
+
+.pets {
+    display: flex;
+    gap: 15px;
+}
+
+.pets a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #29152f;
+    background: white;
+    padding: 20px;
+    border-radius: 40px;
+    font-size: 22px;
+}
+
+.pets .active {
+    background: #ff5785;
+    color: white;
+}
+
+
+.terms {
+    display: flex !important;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px !important;
+}
+
+.terms input {
+    width: 20px;
+    height: 20px;
+}
+
+.terms span {
+    color: #c82b66;
+}
+
+
+.create {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #ff5785;
+    color: white;
+    padding: 22px;
+    border-radius: 45px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    color: #806c75;
+    font-size: 20px;
+}
+
+.or span {
+    width: 250px;
+    height: 2px;
+    background: #f0cce4;
+}
+
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    background: white;
+    color: #29152f;
+    padding: 22px;
+    border-radius: 40px;
+    font-size: 22px;
+    box-shadow: 0 2px 6px #eadde3;
+}
+
+
+.login {
+    text-align: center;
+    font-size: 22px;
+    color: #62545b;
+    margin: 70px 0 30px;
+}
+
+.login a {
+    color: #c82b66;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <header class="head">
+        <div class="logo">
+            🐾 PawPal
+        </div>
+
+        <h1>PawPal</h1>
+
+        <a href="index.html" class="club">♥ Pet Club</a>
+    </header>
+
+
+    <div class="welcome">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80"
+             alt="Cute dog">
+
+        <div>
+            <h2>Join our happy pet family! 🐶✨</h2>
+            <p>Free health reminders & treats</p>
+        </div>
+    </div>
+
+
+    <main class="signup">
+
+        <h1>Create Account</h1>
+
+        <p class="sub">
+            Let us give your pet the happiest, healthiest life
+        </p>
+
+
+        <label>Parent / Owner Name</label>
+        <input type="text" placeholder="♙  Your full name">
+
+
+        <label>Pet Type</label>
+
+        <div class="pets">
+            <a href="#" class="active">Dog 🐶</a>
+            <a href="#">Cat 🐱</a>
+            <a href="#">Other 🐰</a>
+        </div>
+
+
+        <label>Pet’s Name</label>
+        <input type="text" placeholder="🐾  e.g. Buddy, Mochi">
+
+
+        <label>Email Address</label>
+        <input type="email" placeholder="✉  hello@pawpal.com">
+
+
+        <label>Create Password</label>
+        <input type="password" placeholder="🔒  At least 8 cute characters">
+
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="🔒  At least 8 cute characters">
+
+
+        <label class="terms">
+            <input type="checkbox">
+            I agree to PawPal <span>Friendly Terms & Privacy</span>
+        </label>
+
+
+        <a href="5_home.html" class="create">
+            Create Free Account 🐾
+        </a>
+
+
+        <div class="or">
+            <span></span>
+            or sign up with
+            <span></span>
+        </div>
+
+
+        <div class="social">
+            <a href="google.html">🌈 Google</a>
+            <a href="apple.html"> Apple</a>
+        </div>
+
+
+        <p class="login">
+            Already a pet parent?
+            <a href="index.html">Log In</a>
+        </p>
+
+    </main>
+
+</body>
+</html>

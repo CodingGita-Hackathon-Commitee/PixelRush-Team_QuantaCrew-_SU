@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PawPal Care</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PawPal style rounded font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =================================
+   PAWPAL PROFILE PAGE
+================================= */
+
+.profile-body {
+    margin: 0;
+    background: #fff8fc;
+    color: #2b1834;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* HEADER */
+
+.profile-header {
+    height: 100px;
+    background: #fff8fc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.profile-brand small {
+    color: #ff5785;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profile-brand h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #281531;
+}
+
+.profile-user {
+    width: 46px;
+    height: 46px;
+    background: #c32161;
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 23px;
+}
+
+
+/* MAIN */
+
+.profile-main {
+    width: 490px;
+    margin: auto;
+}
+
+
+/* PASSPORT */
+
+.passport {
+    background: linear-gradient(
+        135deg,
+        #ffffff 35%,
+        #fbe9fb 100%
+    );
+
+    border-radius: 42px;
+    padding: 28px 28px 25px;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+.passport-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.verified-passport {
+    background: #f6dcfa;
+    color: #351b3d;
+
+    padding: 9px 18px;
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.verified-passport:first-letter {
+    color: #c32161;
+}
+
+
+.passport-id {
+    background: #f9eafa;
+    color: #594657;
+
+    padding: 9px 16px;
+    border-radius: 25px;
+
+    font-size: 16px;
+}
+
+
+/* BUDDY IMAGE */
+
+.buddy-image {
+    width: 145px;
+    height: 145px;
+
+    margin: 20px auto 15px;
+
+    position: relative;
+}
+
+
+.buddy-image img {
+    width: 145px;
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #ff9ec1;
+
+    box-sizing: border-box;
+}
+
+
+.paw-circle {
+    position: absolute;
+
+    right: -6px;
+    bottom: -4px;
+
+    width: 48px;
+    height: 48px;
+
+    background: #ff5785;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.passport h2 {
+    margin: 0 0 5px;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+.buddy-type {
+    display: inline-block;
+
+    background: #ffd6e4;
+    color: #3c1830;
+
+    padding: 5px 22px;
+
+    border-radius: 25px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.microchip {
+    margin: 13px 0 0;
+
+    color: #6d5963;
+    font-size: 16px;
+}
+
+
+.microchip b {
+    color: #2d1936;
+}
+
+
+/* SHIELD */
+
+.shield-card {
+    margin-top: 28px;
+
+    background: #f5d8fc;
+
+    min-height: 100px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.shield-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: #ff68a0;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.shield-text h3 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.shield-text p {
+    margin: 3px 0 0;
+
+    color: #665361;
+    font-size: 16px;
+}
+
+
+.active {
+    margin-left: auto;
+
+    background: white;
+
+    color: #c32161;
+
+    padding: 8px 15px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* PET DETAILS */
+
+.pet-details {
+    margin-top: 28px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.pet-detail {
+    background: white;
+
+    min-height: 140px;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+}
+
+
+.pet-detail p {
+    margin: 0 0 12px;
+
+    color: #705d67;
+
+    font-size: 16px;
+}
+
+
+.pet-detail h3 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.pet-detail h3 small {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.pet-detail span {
+    color: #705d67;
+    font-size: 16px;
+}
+
+
+.growth {
+    color: #c32161 !important;
+}
+
+
+/* CLINIC PASS */
+
+.clinic-card {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 40px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+}
+
+
+.clinic-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.clinic-title h2 {
+    margin: 0;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.clinic-title span {
+    background: #ffd6e4;
+
+    color: #571d3b;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+.qr-area {
+    background: #fae8fb;
+
+    margin-top: 22px;
+
+    padding: 28px;
+
+    text-align: center;
+}
+
+
+.qr-code {
+    width: 190px;
+    height: 190px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+.qr-row {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 50px;
+}
+
+
+.qr-row i {
+    font-size: 30px;
+    font-style: normal;
+    letter-spacing: 4px;
+}
+
+
+.qr-row strong {
+    width: 48px;
+    height: 48px;
+
+    background: #ff5785;
+
+    color: white;
+
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.qr-area p {
+    margin: 5px 0 0;
+
+    color: #69535f;
+
+    font-size: 15px;
+}
+
+
+/* MEDICAL */
+
+.medical-card {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 40px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+}
+
+
+.medical-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.medical-title h2 {
+    margin: 0;
+
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+.medical-title span {
+    color: #6d5963;
+
+    font-size: 15px;
+}
+
+
+.medical-tags {
+    margin-top: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.medical-tags span {
+    width: fit-content;
+
+    background: #f5dafa;
+
+    padding: 9px 18px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* BUTTONS */
+
+.edit-button,
+.back-button {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    padding: 20px;
+
+    margin-top: 28px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.edit-button {
+    background: #ff5785;
+    color: white;
+
+    box-shadow: 0 8px 20px #ffd1df;
+}
+
+
+.back-button {
+    background: #ffd9e4;
+    color: #47152f;
+
+    margin-bottom: 35px;
+}
+
+</style>
+
+
+    
+</head>
+
+<body class="profile-body">
+
+    <!-- HEADER -->
+
+    <header class="profile-header">
+
+        <div class="profile-brand">
+            <small>🐾 PawPal</small>
+            <h1>Care</h1>
+        </div>
+
+        <a href="4_profile.html" class="profile-user">
+            ♙
+        </a>
+
+    </header>
+
+
+    <main class="profile-main">
+
+
+        <!-- VERIFIED PET PASSPORT -->
+
+        <section class="passport">
+
+            <div class="passport-top">
+
+                <span class="verified-passport">
+                    ✹ &nbsp;Verified Passport
+                </span>
+
+                <span class="passport-id">
+                    ▦ #98514-A2
+                </span>
+
+            </div>
+
+
+            <div class="buddy-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=400&q=80"
+                    alt="Buddy"
+                >
+
+                <span class="paw-circle">
+                    🐾
+                </span>
+
+            </div>
+
+
+            <h2>Buddy</h2>
+
+            <div class="buddy-type">
+                Golden Pup • 7 Months
+            </div>
+
+            <p class="microchip">
+                ⚙ Microchip ID:
+                <b>98514-A2</b>
+                (ISO standard)
+            </p>
+
+        </section>
+
+
+
+        <!-- PAWPAL SHIELD -->
+
+        <section class="shield-card">
+
+            <div class="shield-icon">
+                ✚
+            </div>
+
+            <div class="shield-text">
+
+                <h3>PawPal Shield Plus</h3>
+
+                <p>
+                    Active • 90% Vet Coverage
+                </p>
+
+            </div>
+
+            <span class="active">
+                ● Active
+            </span>
+
+        </section>
+
+
+
+        <!-- PET DETAILS -->
+
+        <section class="pet-details">
+
+            <div class="pet-detail">
+
+                <p>Weight</p>
+
+                <h3>
+                    18.4 <small>kg</small>
+                </h3>
+
+                <span class="growth">
+                    ● Normal Growth
+                </span>
+
+            </div>
+
+
+            <div class="pet-detail">
+
+                <p>Birthday</p>
+
+                <h3>
+                    Mar 15, 2024
+                </h3>
+
+                <span>
+                    Pisces Pup 🐾
+                </span>
+
+            </div>
+
+
+            <div class="pet-detail">
+
+                <p>Breed</p>
+
+                <h3>
+                    Purebred
+                </h3>
+
+                <span>
+                    Golden Retriever
+                </span>
+
+            </div>
+
+
+            <div class="pet-detail">
+
+                <p>Gender</p>
+
+                <h3>
+                    ♂ Male
+                </h3>
+
+                <span>
+                    Neutered
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CLINIC PASS -->
+
+        <section class="clinic-card">
+
+            <div class="clinic-title">
+
+                <h2>
+                    ▣ Clinic Pass
+                </h2>
+
+                <span>
+                    Tap to Enlarge
+                </span>
+
+            </div>
+
+
+            <div class="qr-area">
+
+                <div class="qr-code">
+
+                    <div class="qr-row">
+                        <b>▣</b>
+                        <i>▪ ▪ ▪</i>
+                        <b>▣</b>
+                    </div>
+
+                    <div class="qr-row">
+                        <i>▪ ▪</i>
+                        <strong>●</strong>
+                        <i>▪ ▪</i>
+                    </div>
+
+                    <div class="qr-row">
+                        <b>▣</b>
+                        <i>▪ ▪ ▪</i>
+                        <b>▣</b>
+                    </div>
+
+                </div>
+
+                <p>
+                    Instant scan at participating vet hospitals
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEDICAL DATA -->
+
+        <section class="medical-card">
+
+            <div class="medical-title">
+
+                <h2>
+                    ▣ Key Medical Data
+                </h2>
+
+                <span>
+                    Up-to-date
+                </span>
+
+            </div>
+
+
+            <div class="medical-tags">
+
+                <span>
+                    ◉ Blood DEA 1.1+
+                </span>
+
+                <span>
+                    ⚕ Rabies Vaccinated
+                </span>
+
+                <span>
+                    ⬟ No Known Allergies
+                </span>
+
+                <span>
+                    ✹ NexGard Protected
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACTION BUTTONS -->
+
+        <a href="index.html" class="edit-button">
+            ✎ &nbsp; Edit Profile & Records
+        </a>
+
+
+        <a href="5_home.html" class="back-button">
+            ↓ &nbsp; Back to PawPal Home
+        </a>
+
+
+    </main>
+
+</body>
+</html>
