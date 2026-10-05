@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPal - Clinic Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff9fc;
+            font-family: "Quicksand", sans-serif;
+            color: #24152f;
+        }
+
+        .page {
+            width: 760px;
+            margin: auto;
+            padding: 20px 35px 45px;
+        }
+
+        /* TOP SWITCH */
+
+        .switch-box {
+            height: 100px;
+            background: #ebe7e8;
+            border-radius: 55px;
+            padding: 10px;
+            display: flex;
+            margin-bottom: 18px;
+        }
+
+        .switch {
+            width: 50%;
+            border: 0;
+            border-radius: 50px;
+            background: transparent;
+            font: 600 25px "Quicksand";
+            color: #594b50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .switch.active {
+            background: white;
+            color: #ff4f89;
+            box-shadow: 0 3px 10px #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .switch span {
+            font-size: 28px;
+        }
+
+        /* PROFILE */
+
+        .profile {
+            background: white;
+            border-radius: 55px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 8px #eadfe5;
+        }
+
+        .doctor-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .status {
+            display: inline-block;
+            background: #55e3d4;
+            color: #087d78;
+            padding: 7px 18px;
+            border-radius: 25px;
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+        .profile h2 {
+            font-size: 36px;
+            margin: 6px 0 2px;
+            color: #222;
+        }
+
+        .hospital {
+            font-size: 25px;
+            color: #634f58;
+        }
+
+        .account {
+            width: 75px;
+            height: 75px;
+            border: 0;
+            border-radius: 50%;
+            background: #f3eeee;
+            font-size: 34px;
+            color: #594b50;
+        }
+
+        /* LOGIN */
+
+        .login {
+            background: white;
+            border-radius: 55px;
+            padding: 38px 32px 32px;
+            box-shadow: 0 3px 8px #eadfe5;
+        }
+
+        .login h1 {
+            font-size: 42px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #614f56;
+            margin-bottom: 30px;
+        }
+
+        /* FORM */
+
+        .group {
+            margin-bottom: 28px;
+        }
+
+        .label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 13px;
+            font-size: 23px;
+            font-weight: 700;
+            color: #252525;
+        }
+
+        .pink {
+            color: #ff4f89;
+        }
+
+        .input {
+            height: 92px;
+            border-radius: 50px;
+            background: #f4f1f1;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            font: 400 27px "Quicksand";
+            color: #292529;
+        }
+
+        .input-icon {
+            font-size: 30px;
+            color: #62555a;
+        }
+
+        /* CHECKBOX */
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            font-size: 24px;
+            margin: 5px 0 20px;
+        }
+
+        .remember input {
+            width: 40px;
+            height: 40px;
+            accent-color: #ff568b;
+        }
+
+        /* BIOMETRIC */
+
+        .biometric {
+            height: 110px;
+            border-radius: 60px;
+            background: #f4f1f1;
+            display: flex;
+            align-items: center;
+            padding: 15px 22px;
+            margin-bottom: 30px;
+        }
+
+        .fingerprint {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #e8ddff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: #6956ae;
+            margin-right: 20px;
+        }
+
+        .bio {
+            flex: 1;
+        }
+
+        .bio-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .bio-subtitle {
+            font-size: 20px;
+            font-weight: 700;
+            color: #634f58;
+        }
+
+        .enabled {
+            background: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            color: #6956ae;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 2px 6px #ddd;
+        }
+
+        /* BUTTON */
+
+        .dashboard {
+            display: block;
+            width: 100%;
+            height: 110px;
+            border-radius: 60px;
+            background: #ff568b;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding-top: 35px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        /* EMERGENCY */
+
+        .emergency {
+            margin-top: 30px;
+            background: #ffd9d5;
+            border-radius: 35px;
+            padding: 30px;
+            display: flex;
+            gap: 20px;
+            color: #a10e16;
+        }
+
+        .emergency-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            flex-shrink: 0;
+        }
+
+        .emergency h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .emergency p {
+            font-size: 22px;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 30px 0;
+            text-align: center;
+            color: #67565c;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .footer-brand {
+            margin-top: 28px;
+            font-size: 19px;
+            color: #98858c;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- TOP SWITCH -->
+
+    <div class="switch-box">
+
+        <a href="index.html" class="switch">
+            🐾 Pet Parent
+        </a>
+
+        <a href="1_clinic.html" class="switch active">
+            🩺 Clinic & Vet
+        </a>
+
+    </div>
+
+
+    <!-- DOCTOR PROFILE -->
+
+    <div class="profile">
+
+        <img
+            class="doctor-img"
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+            alt="Dr. Anita"
+        >
+
+        <div class="profile-info">
+
+            <div class="status">
+                ● ON-DUTY SHIFT PORTAL
+            </div>
+
+            <h2>Welcome, Dr. Anita!</h2>
+
+            <div class="hospital">
+                Stravet 24h Emergency Hospital
+            </div>
+
+        </div>
+
+        <button class="account">
+            ↔
+        </button>
+
+    </div>
+
+
+    <!-- LOGIN CARD -->
+
+    <div class="login">
+
+        <h1>Clinic Portal Sign In</h1>
+
+        <p class="intro">
+            Access live triage, vitals telemetry & incoming
+            emergency dispatch alerts.
+        </p>
+
+
+        <!-- CLINIC ID -->
+
+        <div class="group">
+
+            <div class="label">
+                <span>
+                    <span class="pink">▣</span>
+                    Clinic ID / Vet License
+                </span>
+
+                <span class="pink">REQUIRED</span>
+            </div>
+
+            <div class="input">
+
+                <input
+                    type="text"
+                    value="STR-8820-MED"
+                >
+
+                <span class="input-icon">✓</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="group">
+
+            <div class="label">
+
+                <span>
+                    <span class="pink">♧</span>
+                    Staff Email / Doctor ID
+                </span>
+
+            </div>
+
+            <div class="input">
+
+                <input
+                    type="email"
+                    value="dr.sharma@stravet.com"
+                >
+
+                <span class="input-icon">✉</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PIN -->
+
+        <div class="group">
+
+            <div class="label">
+
+                <span>
+                    <span class="pink">⚿</span>
+                    Master Key / Quick Shift PIN
+                </span>
+
+                <span class="pink">
+                    Forgot PIN?
+                </span>
+
+            </div>
+
+            <div class="input">
+
+                <input
+                    type="password"
+                    value="123456789012"
+                >
+
+                <span class="input-icon">
+                    ◉
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- REMEMBER -->
+
+        <label class="remember">
+
+            <input type="checkbox">
+
+            Remember this triage station terminal
+
+        </label>
+
+
+        <!-- BIOMETRICS -->
+
+        <div class="biometric">
+
+            <div class="fingerprint">
+                ◎
+            </div>
+
+            <div class="bio">
+
+                <div class="bio-title">
+                    Touch ID / Biometrics
+                </div>
+
+                <div class="bio-subtitle">
+                    Fast emergency authorization
+                </div>
+
+            </div>
+
+            <div class="enabled">
+                Enabled
+            </div>
+
+        </div>
+
+
+        <!-- DASHBOARD BUTTON -->
+
+        <a href="20_register_clinic.html" class="dashboard">
+            Access Clinic Dashboard 🩺
+        </a>
+
+    </div>
+
+
+    <!-- EMERGENCY -->
+
+    <div class="emergency">
+
+        <div class="emergency-icon">
+            ✱
+        </div>
+
+        <div>
+
+            <h3>
+                Emergency On-Call Synchronization
+            </h3>
+
+            <p>
+                Logging in immediately links your shift badge
+                with the live incoming ambulance queue and
+                critical pet vitals feed.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-links">
+
+            <div>
+                HIPAA & Vet<br>
+                Privacy
+            </div>
+
+            <div>•</div>
+
+            <div>
+                24/7 IT<br>
+                Helpdesk
+            </div>
+
+            <div>•</div>
+
+            <div>
+                App Version<br>
+                4.8.2
+            </div>
+
+        </div>
+
+        <div class="footer-brand">
+            🐾 PawPal Verified Medical Care Network
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
