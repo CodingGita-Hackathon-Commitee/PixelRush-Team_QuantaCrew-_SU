@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Date & Time</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fff7fb;
+            font-family: Arial, sans-serif;
+            color: #321b38;
+        }
+
+        .page {
+            width: 1200px;
+            margin: auto;
+            min-height: 100vh;
+            background: #fff7fb;
+        }
+
+        /* TOP BAR */
+
+        .top {
+            height: 85px;
+            background: white;
+            display: flex;
+            align-items: center;
+            padding: 0 35px;
+            gap: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .back {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #f8e5ff;
+            color: #321b38;
+            text-decoration: none;
+            text-align: center;
+            line-height: 48px;
+            font-size: 40px;
+        }
+
+        .logo {
+            color: #d52c6b;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .user {
+            margin-left: auto;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #b91f5c;
+            color: white;
+            text-align: center;
+            line-height: 55px;
+            font-size: 25px;
+        }
+
+        /* MAIN */
+
+        .main {
+            padding: 30px 55px 50px;
+        }
+
+        /* DOCTOR */
+
+        .doctor {
+            background: white;
+            border-radius: 40px;
+            padding: 25px 35px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 10px #eee;
+            margin-bottom: 35px;
+        }
+
+        .doctor img {
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .doctor-info {
+            margin-left: 25px;
+        }
+
+        .doctor-info h1 {
+            margin: 0;
+            font-size: 31px;
+        }
+
+        .doctor-info p {
+            margin: 8px 0 0;
+            font-size: 19px;
+            color: #69596b;
+        }
+
+        .verified {
+            color: #bd205e;
+        }
+
+        .buddy {
+            background: #ffd9e9;
+            color: #b51f5c;
+            padding: 7px 15px;
+            border-radius: 22px;
+            font-weight: bold;
+        }
+
+        .cloud {
+            margin-left: auto;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fae7ff;
+            text-align: center;
+            line-height: 60px;
+            color: #bd205e;
+            font-size: 28px;
+        }
+
+        /* VISIT TYPE */
+
+        .visit {
+            display: flex;
+            background: #f9eaff;
+            border-radius: 40px;
+            padding: 10px;
+            margin-bottom: 35px;
+        }
+
+        .visit a {
+            width: 50%;
+            padding: 20px;
+            border-radius: 35px;
+            text-align: center;
+            text-decoration: none;
+            color: #5d4c59;
+            font-size: 22px;
+        }
+
+        .visit .active {
+            background: #ff5b87;
+            color: white;
+        }
+
+        /* TWO COLUMNS */
+
+        .columns {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .left {
+            width: 55%;
+        }
+
+        .right {
+            width: 45%;
+        }
+
+        /* COMMON CARD */
+
+        .card {
+            background: white;
+            border-radius: 40px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px #eee;
+        }
+
+        /* CALENDAR */
+
+        .month {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .month h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .week {
+            background: #ffdce9;
+            padding: 9px 17px;
+            border-radius: 22px;
+            color: #6e183e;
+        }
+
+        .arrows {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fae8ff;
+            text-align: center;
+            line-height: 45px;
+            font-size: 25px;
+        }
+
+        .days {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .day {
+            flex: 1;
+            padding: 20px 8px;
+            background: #faeaff;
+            border-radius: 45px;
+            text-align: center;
+            color: #6b5a66;
+        }
+
+        .day p {
+            margin: 0 0 15px;
+            font-size: 18px;
+        }
+
+        .day b {
+            display: block;
+            font-size: 25px;
+            color: #321b38;
+        }
+
+        .day span {
+            display: block;
+            margin-top: 15px;
+            color: #bd205e;
+            font-size: 20px;
+        }
+
+        .day.active {
+            background: #ff5b87;
+            color: white;
+        }
+
+        .day.active b,
+        .day.active span {
+            color: white;
+        }
+
+        .calendar-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            font-size: 18px;
+            color: #665560;
+        }
+
+        .calendar-bottom b {
+            color: #bd205e;
+        }
+
+        /* TIME */
+
+        .time-title {
+            font-size: 25px;
+            margin: 0 0 20px;
+        }
+
+        .dot {
+            color: #ff5b87;
+        }
+
+        .time-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .time {
+            flex: 1;
+            padding: 18px 10px;
+            background: #faeaff;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .time.active {
+            background: #ff5b87;
+            color: white;
+        }
+
+        /* NOTE */
+
+        .note-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .note-head h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .optional {
+            color: #6d5b67;
+        }
+
+        .note {
+            margin-top: 20px;
+            background: #fcecff;
+            border-radius: 35px;
+            padding: 25px;
+            min-height: 130px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .count {
+            text-align: right;
+            color: #bd205e;
+            margin-top: 15px;
+        }
+
+        /* CANCELLATION */
+
+        .cancel {
+            background: #ffe5ef;
+            border-radius: 40px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .bell {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #ffd5e4;
+            text-align: center;
+            line-height: 55px;
+            font-size: 25px;
+            margin-right: 20px;
+        }
+
+        .cancel h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #5e1237;
+        }
+
+        .cancel p {
+            margin: 5px 0 0;
+            color: #9d345e;
+            font-size: 18px;
+        }
+
+        /* CONFIRM */
+
+        .confirm {
+            display: block;
+            padding: 21px;
+            background: #ff5b87;
+            border-radius: 40px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px #ffd0dd;
+        }
+
+        .secure {
+            text-align: center;
+            margin-top: 20px;
+            color: #665560;
+            font-size: 17px;
+        }
+
+        .secure b {
+            color: #bd205e;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- TOP -->
+
+    <div class="top">
+
+        <a class="back" href="17_book_appointment.html">
+            ‹
+        </a>
+
+        <span class="logo">
+            🐾 PawPal
+        </span>
+
+        <span class="title">
+            SOS Emergency
+        </span>
+
+        <span class="user">
+            ♙
+        </span>
+
+    </div>
+
+
+    <div class="main">
+
+        <!-- DOCTOR -->
+
+        <div class="doctor">
+
+            <img src="doctor.png">
+
+            <div class="doctor-info">
+
+                <h1>
+                    Dr. Clara Evans
+                    <span class="verified">✿</span>
+                </h1>
+
+                <p>
+                    Booking for
+                    <span class="buddy">
+                        🐾 Buddy
+                    </span>
+                </p>
+
+            </div>
+
+            <div class="cloud">
+                ♧
+            </div>
+
+        </div>
+
+
+        <!-- VISIT TYPE -->
+
+        <div class="visit">
+
+            <a class="active" href="11_dates.html">
+                ▣ &nbsp; In-Clinic Visit
+            </a>
+
+            <a href="11_dates.html">
+                ▣ &nbsp; Video Vet Call
+            </a>
+
+        </div>
+
+
+        <div class="columns">
+
+            <!-- LEFT -->
+
+            <div class="left">
+
+                <!-- CALENDAR -->
+
+                <div class="card">
+
+                    <div class="month">
+
+                        <h1>October 2025</h1>
+
+                        <span class="week">
+                            Week 3
+                        </span>
+
+                        <div class="arrows">
+
+                            <div class="arrow">
+                                ‹
+                            </div>
+
+                            <div class="arrow">
+                                ›
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="days">
+
+                        <div class="day">
+
+                            <p>Mon</p>
+
+                            <b>13</b>
+
+                            <span>♣</span>
+
+                        </div>
+
+
+                        <div class="day">
+
+                            <p>Tue</p>
+
+                            <b>14</b>
+
+                            <span>♣</span>
+
+                        </div>
+
+
+                        <div class="day">
+
+                            <p>Wed</p>
+
+                            <b>15</b>
+
+                            <span>⊘</span>
+
+                        </div>
+
+
+                        <div class="day active">
+
+                            <p>Thu</p>
+
+                            <b>16</b>
+
+                            <span>♣</span>
+
+                        </div>
+
+
+                        <div class="day">
+
+                            <p>Fri</p>
+
+                            <b>17</b>
+
+                            <span>♣</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="calendar-bottom">
+
+                        <span>
+                            🐾 Paws indicate open slots
+                        </span>
+
+                        <b>
+                            Thursday, Oct 16
+                        </b>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="card">
+
+                    <h2 class="time-title">
+                        <span class="dot">●</span>
+                        Morning Slots
+                    </h2>
+
+                    <div class="time-row">
+
+                        <div class="time">
+                            09:00 AM
+                        </div>
+
+                        <div class="time active">
+                            ✓ 10:30 AM
+                        </div>
+
+                        <div class="time">
+                            11:15 AM
+                        </div>
+
+                    </div>
+
+
+                    <h2 class="time-title">
+                        <span style="color:#bd205e;">●</span>
+                        Afternoon Slots
+                    </h2>
+
+                    <div class="time-row">
+
+                        <div class="time">
+                            02:00 PM
+                        </div>
+
+                        <div class="time">
+                            03:30 PM
+                        </div>
+
+                        <div class="time">
+                            04:45 PM
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="right">
+
+                <!-- NOTE -->
+
+                <div class="card">
+
+                    <div class="note-head">
+
+                        <h2>
+                            📝 Note for Doctor & Staff
+                        </h2>
+
+                        <span class="optional">
+                            Optional
+                        </span>
+
+                    </div>
+
+
+                    <div class="note">
+
+                        Buddy gets nervous with
+                        stethoscopes, please have a treat
+                        ready! 🐾
+
+                        <div class="count">
+                            64/150
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CANCELLATION -->
+
+                <div class="cancel">
+
+                    <div class="bell">
+                        ♧
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Free Cancellation up to 2h before
+                        </h2>
+
+                        <p>
+                            We will send a reminder notification
+                            on WhatsApp!
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM -->
+
+                <a class="confirm" href="13_receipt.html">
+                    ✿ &nbsp; Confirm Appointment ($45)
+                </a>
+
+
+                <div class="secure">
+                    <b>♙</b>
+                    Encrypted booking powered by PawPal Health
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
