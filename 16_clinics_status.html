@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find a Clinic - PawPal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fff7fb;
+            font-family: Arial, sans-serif;
+            color: #241532;
+        }
+
+        .page {
+            width: 1100px;
+            margin: auto;
+            padding: 55px 50px;
+        }
+
+        /* Header */
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 45px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .paw {
+            width: 75px;
+            height: 75px;
+            background: #ffd6e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        .sub {
+            margin: 5px 0 0;
+            color: #806c76;
+            font-size: 22px;
+        }
+
+        .loc {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            box-shadow: 0 5px 20px #eadde5;
+        }
+
+        /* Search */
+
+        .search {
+            background: white;
+            border-radius: 55px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 8px 25px #eadde5;
+            margin-bottom: 40px;
+        }
+
+        .search input {
+            flex: 1;
+            border: 0;
+            outline: none;
+            font-size: 25px;
+            padding: 20px 25px;
+            color: #4d3d47;
+        }
+
+        .search button {
+            border: 0;
+            background: #ff5d8c;
+            color: white;
+            border-radius: 40px;
+            padding: 20px 35px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Tabs */
+
+        .tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .tab {
+            background: white;
+            padding: 18px 35px;
+            border-radius: 40px;
+            font-size: 20px;
+            box-shadow: 0 5px 15px #eee2e8;
+        }
+
+        .active {
+            background: #ff5d8c;
+            color: white;
+        }
+
+        /* Checkup box */
+
+        .check {
+            background: #eee2ff;
+            border-radius: 45px;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        .check-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: #ffd5df;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin-right: 25px;
+        }
+
+        .check h2 {
+            margin: 0 0 5px;
+            font-size: 28px;
+        }
+
+        .check p {
+            margin: 0;
+            color: #66545d;
+            font-size: 20px;
+        }
+
+        .arrow {
+            margin-left: auto;
+            font-size: 35px;
+            color: #b72561;
+        }
+
+        /* Clinic cards */
+
+        .clinic {
+            background: white;
+            border-radius: 45px;
+            padding: 30px;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 8px 25px #eadde5;
+        }
+
+        .clinic img {
+            width: 175px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h2 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        .info p {
+            margin: 8px 0;
+            color: #725f69;
+            font-size: 20px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #e8ddff;
+            color: #55428f;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 17px;
+        }
+
+        .view {
+            background: #ffd6e1;
+            color: #a91f59;
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 35px;
+            font-size: 22px;
+            white-space: nowrap;
+        }
+
+        .view:hover {
+            background: #ff5d8c;
+            color: white;
+        }
+
+        /* Bottom map */
+
+        .map {
+            background: white;
+            border-radius: 45px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 8px 25px #eadde5;
+            margin-top: 45px;
+        }
+
+        .map-icon {
+            width: 70px;
+            height: 70px;
+            background: #e4dcff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-right: 25px;
+        }
+
+        .map h2 {
+            margin: 0 0 5px;
+            font-size: 27px;
+        }
+
+        .map p {
+            margin: 0;
+            color: #806c76;
+            font-size: 20px;
+        }
+
+        .map-btn {
+            margin-left: auto;
+            background: #ff5d8c;
+            color: white;
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 35px;
+            font-size: 21px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="page">
+
+        <!-- Header -->
+
+        <div class="head">
+
+            <div class="logo">
+                <div class="paw">🐾</div>
+
+                <div>
+                    <h1>Find a Clinic</h1>
+                    <p class="sub">Gentle & loving care nearby</p>
+                </div>
+            </div>
+
+            <div class="loc">➤</div>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <form class="search">
+
+            <input
+                type="text"
+                placeholder="Search clinic or doctor..."
+                required
+            >
+
+            <button type="submit">Go →</button>
+
+        </form>
+
+
+        <!-- Tabs -->
+
+        <div class="tabs">
+
+            <a class="tab active">♡ Nearby</a>
+
+            <a class="tab">♡ Popular</a>
+
+            <a class="tab">↶ Visited</a>
+
+            <a class="tab">✚ 24/7</a>
+
+        </div>
+
+
+        <!-- Routine Checkup -->
+
+        <div class="check">
+
+            <div class="check-icon">🤲</div>
+
+            <div>
+                <h2>Need routine checkup?</h2>
+                <p>Book in 2 taps with instant vet chat</p>
+            </div>
+
+            <div class="arrow">›</div>
+
+        </div>
+
+
+        <!-- Clinic 1 -->
+
+        <div class="clinic">
+
+            <img
+                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=500&q=80"
+                alt="Happy Paws Clinic"
+            >
+
+            <div class="info">
+
+                <span class="status">Open Now</span>
+
+                <h2>Happy Paws Care Clinic</h2>
+
+                <p>📍 0.8 km away &nbsp; • &nbsp; ⭐ 4.9 (124)</p>
+
+                <p>Wellness exams, dental, gentle surgery</p>
+
+            </div>
+
+            <a href="19_clinic_details.html" class="view">
+                View →
+            </a>
+
+        </div>
+
+
+        <!-- Clinic 2 -->
+
+        <div class="clinic">
+
+            <img
+                src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=500&q=80"
+                alt="Sunshine Pet Sanctuary"
+            >
+
+            <div class="info">
+
+                <span class="status">Open Now</span>
+
+                <h2>Sunshine Pet Sanctuary</h2>
+
+                <p>📍 1.5 km away &nbsp; • &nbsp; ⭐ 4.8 (89)</p>
+
+                <p>Vaccinations, grooming & spa, holistic</p>
+
+            </div>
+
+            <a href="19_clinic_details.html" class="view">
+                View →
+            </a>
+
+        </div>
+
+
+        <!-- Clinic 3 -->
+
+        <div class="clinic">
+
+            <img
+                src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=500&q=80"
+                alt="Fluffy Friends Vet"
+            >
+
+            <div class="info">
+
+                <span class="status">Closed (9 AM)</span>
+
+                <h2>Fluffy Friends Vet</h2>
+
+                <p>📍 3.2 km away &nbsp; • &nbsp; ⭐ 4.7 (63)</p>
+
+                <p>Cat specialists, quiet recovery wards</p>
+
+            </div>
+
+            <a href="19_clinic_details.html" class="view">
+                View →
+            </a>
+
+        </div>
+
+
+        <!-- Map -->
+
+        <div class="map">
+
+            <div class="map-icon">🗺</div>
+
+            <div>
+                <h2>Explore on Map</h2>
+                <p>See all 12 clinics in your city</p>
+            </div>
+
+            <a href="19_clinic_details.html" class="map-btn">
+                Open Map
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

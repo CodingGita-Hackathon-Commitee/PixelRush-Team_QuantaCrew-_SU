@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health History</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fdf9fa;
+            font-family: Arial, sans-serif;
+            color: #292329;
+        }
+
+        .page {
+            width: 390px;
+            margin: auto;
+            background: white;
+        }
+
+        .top {
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid #eee;
+        }
+
+        .top a {
+            text-decoration: none;
+            color: #333;
+            font-size: 25px;
+        }
+
+        .title {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .card {
+            margin: 15px;
+            padding: 18px;
+            border-radius: 25px;
+            background: white;
+            box-shadow: 0 3px 15px #eee;
+        }
+
+        .pet {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pet img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .pet h2 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .pet p {
+            margin: 5px 0;
+            color: #655a61;
+        }
+
+        .switch {
+            margin-left: auto;
+            background: #ffe0eb;
+            color: #ad2160;
+            padding: 12px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+        }
+
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            width: 33%;
+            padding: 15px 5px;
+            text-align: center;
+            background: #f5f1f2;
+        }
+
+        .stat b {
+            font-size: 20px;
+        }
+
+        .download {
+            display: block;
+            margin-top: 18px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 25px;
+            background: #eeeaea;
+            color: #222;
+            text-decoration: none;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin: 25px 15px;
+        }
+
+        .tabs a {
+            padding: 12px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #5d5058;
+            background: white;
+        }
+
+        .tabs .active {
+            background: #b52b67;
+            color: white;
+        }
+
+        .record {
+            margin: 18px 15px;
+            padding: 18px;
+            border-radius: 25px;
+            background: white;
+            box-shadow: 0 3px 15px #eee;
+        }
+
+        .record h2 {
+            margin: 8px 0;
+        }
+
+        .date {
+            color: #62565d;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .safe {
+            float: right;
+            padding: 8px 12px;
+            border-radius: 20px;
+            background: #c9f7f2;
+            color: #087c73;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .info {
+            background: #f5f1f1;
+            padding: 12px;
+            margin-top: 15px;
+        }
+
+        .pink {
+            color: #b52b67;
+            font-weight: bold;
+        }
+
+        .doctor {
+            margin-top: 18px;
+            color: #62565d;
+        }
+
+        .details {
+            float: right;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background: #f1eeee;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .add {
+            display: block;
+            margin: 25px 30px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 30px;
+            background: #b52b67;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .help {
+            margin: 15px;
+            padding: 20px;
+            border-radius: 25px;
+            background: #f8eef8;
+        }
+
+        .bottom {
+            margin-top: 50px;
+            padding: 15px 5px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+        }
+
+        .bottom a {
+            text-decoration: none;
+            color: #5d5058;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .bottom .active {
+            color: #b52b67;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Top -->
+    <div class="top">
+        <a href="5_home.html">←</a>
+        <span>🐾</span>
+        <span class="title">Health</span>
+        <span>☷</span>
+        <a href="4_profile.html">●</a>
+    </div>
+
+
+    <!-- Pet -->
+    <div class="card">
+
+        <div class="pet">
+            <img src="dog.png">
+
+            <div>
+                <h2>Mojo 🐾</h2>
+                <p>Golden Retriever • 3 yrs • 31 kg</p>
+            </div>
+
+            <a class="switch" href="4_profile.html">Switch⌄</a>
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                🗂️<br>
+                <b>6</b><br>
+                Total Visits
+            </div>
+
+            <div class="stat">
+                ✔️<br>
+                <b>100%</b><br>
+                Vaccines Done
+            </div>
+
+            <div class="stat">
+                💊<br>
+                <b>2</b><br>
+                Active Rx
+            </div>
+
+        </div>
+
+        <a class="download" href="18_history.html">
+            ⬇ Download Medical Passport (PDF)
+        </a>
+
+    </div>
+
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <a class="active" href="18_history.html">All Records</a>
+        <a href="7_checkup.html">Vaccinations</a>
+        <a href="7_checkup.html">Routine Checkups</a>
+    </div>
+
+
+    <!-- Record 1 -->
+    <div class="record">
+
+        <span class="safe">✔ TREATED & SAFE</span>
+
+        <p class="date">OCT 15, 2025 • EMERGENCY CARE</p>
+
+        <h2>Stravet 24h<br>Animal Hospital</h2>
+
+        <div class="info">
+            <span class="pink">Diagnosis:</span>
+            Accidental Dark Chocolate Ingestion
+            <p>
+                Gastric decontamination, IV fluid therapy,
+                cardiac telemetry monitoring. Mojo bounced
+                back with normal vitals and high wagging spirits.
+            </p>
+        </div>
+
+        <p class="doctor">♧ Dr. Anita Sharma, DVM</p>
+
+        <a class="details" href="18_history.html">View Report ›</a>
+
+    </div>
+
+
+    <!-- Record 2 -->
+    <div class="record">
+
+        <span class="safe">✔ CORE VERIFIED</span>
+
+        <p class="date">AUG 20, 2025 • CORE BOOSTER</p>
+
+        <h2>Paws &<br>Whiskers Hospital</h2>
+
+        <div class="info">
+            <b>DHP 3-Year & Bordetella</b>
+            <br><br>
+            <span class="pink">Next booster valid until: August 2028</span>
+        </div>
+
+        <p class="doctor">♧ Dr. Emily Smith, DVM</p>
+
+        <a class="details" href="14_certificate.html">Certificate ↓</a>
+
+    </div>
+
+
+    <!-- Record 3 -->
+    <div class="record">
+
+        <span class="safe">♡ WELLNESS OK</span>
+
+        <p class="date">MAY 12, 2025 • BI-ANNUAL EXAM</p>
+
+        <h2>Maple Valley Vet<br>Clinic</h2>
+
+        <div class="info">
+            <b>Physical Health Score</b><br>
+            <span class="pink">98 / 100</span>
+            <p>Teeth clean, coat glossy</p>
+        </div>
+
+        <div class="info">
+            <b>Current Weight</b><br>
+            30.5 kg
+            <p class="pink">+0.5 kg healthy muscle</p>
+        </div>
+
+        <div class="info">
+            💊 Dispensed 6-mo NexGard flea & tick chewables.
+        </div>
+
+        <p>Attending: Dr. Alan Vance</p>
+
+        <a class="details" href="18_history.html">Notes ›</a>
+
+    </div>
+
+
+    <!-- Record 4 -->
+    <div class="record">
+
+        <span class="safe">♥ HEALED</span>
+
+        <p class="date">JAN 18, 2025 • MINOR PROCEDURE</p>
+
+        <h2>Stravet 24h Animal<br>Hospital</h2>
+
+        <p>
+            Superficial paw pad abrasion on left forelimb
+            during trail sprint. Treated with antiseptic soak,
+            snug bandage, and herbal soothing balm.
+        </p>
+
+        <p>Follow-up check completed Jan 25</p>
+
+        <a class="details" href="18_history.html">Details ›</a>
+
+    </div>
+
+
+    <!-- Add Record -->
+    <a class="add" href="7_checkup.html">
+        ⊕ Add Record or Rx
+    </a>
+
+
+    <!-- Help -->
+    <div class="help">
+        <b>🎧 Missing a previous vet record?</b>
+        <p>
+            Our concierge pet nurse can call your previous
+            clinics and sync past documents for free.
+        </p>
+    </div>
+
+
+    <!-- Bottom Navigation -->
+    <div class="bottom">
+
+        <a href="5_home.html">
+            🏠<br>Home
+        </a>
+
+        <a class="active" href="18_history.html">
+            ♡<br>Health
+        </a>
+
+        <a href="7_checkup.html">
+            ▣<br>Schedule
+        </a>
+
+        <a href="4_profile.html">
+            🐾<br>Pets
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
