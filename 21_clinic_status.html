@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clinic Status</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fcf5ff;
+            color: #241642;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .top {
+            height: 100px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 35px;
+        }
+
+        .back {
+            font-size: 38px;
+            text-decoration: none;
+            color: #241642;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-left: -80px;
+        }
+
+        .user {
+            background: #b72d62;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .tag {
+            background: #eee3ff;
+            color: #62589d;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .live {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 5px;
+        }
+
+        .sub {
+            font-size: 22px;
+            color: #6d5c67;
+        }
+
+        .box {
+            background: white;
+            border-radius: 70px;
+            padding: 40px;
+            margin-top: 35px;
+            text-align: center;
+            box-shadow: 0 5px 20px #eadceb;
+        }
+
+        .status {
+            background: #eee5ff;
+            border-radius: 50px;
+            padding: 10px;
+            display: flex;
+        }
+
+        .status label {
+            width: 50%;
+            padding: 20px;
+            font-size: 28px;
+            border-radius: 45px;
+        }
+
+        .status input {
+            margin-right: 15px;
+        }
+
+        .paw {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #edf0fa;
+            margin: 40px auto 20px;
+            padding: 35px;
+            font-size: 55px;
+        }
+
+        .open {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .text {
+            font-size: 22px;
+            color: #6d5c67;
+            line-height: 1.5;
+        }
+
+        .doctor {
+            background: #faf4ff;
+            border-radius: 50px;
+            padding: 15px;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+
+        .doctor img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .doctor h3 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .doctor p {
+            margin: 8px 0;
+            color: #6d5c67;
+        }
+
+        .duty {
+            margin-left: auto;
+            background: white;
+            padding: 12px;
+            border-radius: 25px;
+            color: #49b99c;
+        }
+
+        .hours {
+            text-align: left;
+        }
+
+        .hours h2 {
+            font-size: 27px;
+        }
+
+        .time {
+            display: flex;
+            gap: 20px;
+        }
+
+        .time div {
+            width: 50%;
+            background: #f5edff;
+            border-radius: 35px;
+            padding: 25px;
+        }
+
+        .time p {
+            font-size: 18px;
+            color: #6d5c67;
+        }
+
+        .time b {
+            font-size: 30px;
+        }
+
+        .walk {
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 21px;
+        }
+
+        .toggle {
+            background: #4cba9c;
+            width: 80px;
+            padding: 5px;
+            border-radius: 30px;
+            text-align: right;
+        }
+
+        .toggle span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .break {
+            background: #fff0e9;
+            border-radius: 60px;
+            padding: 25px 35px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pause {
+            background: white;
+            padding: 18px 30px;
+            border-radius: 40px;
+        }
+
+        .small {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 40px;
+            padding: 25px;
+            width: 50%;
+        }
+
+        .card b {
+            font-size: 25px;
+        }
+
+        .card p {
+            margin: 8px 0;
+            color: #6d5c67;
+            font-size: 18px;
+        }
+
+        .update {
+            display: block;
+            background: #ff6293;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 22px;
+            border-radius: 45px;
+            margin-top: 35px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .note {
+            text-align: center;
+            color: #6d5c67;
+            font-size: 18px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="top">
+            <a class="back" href="20_register_clinic.html">←</a>
+
+            <div class="title">
+                🐾 Clinic Details
+            </div>
+
+            <div class="user">♙</div>
+        </div>
+
+        <div class="head">
+            <div class="tag">◉ CLINICIAN CONTROL</div>
+            <div class="live">🟢 Live Sync Active</div>
+        </div>
+
+        <h1>Clinic Status</h1>
+
+        <p class="sub">
+            Control your clinic's availability in one tap
+        </p>
+
+
+        <div class="box">
+
+            <div class="status">
+                <label>
+                    <input type="radio" name="status" checked>
+                    ● OPEN
+                </label>
+
+                <label>
+                    <input type="radio" name="status">
+                    ● CLOSED
+                </label>
+            </div>
+
+
+            <div class="paw">
+                🐾
+            </div>
+
+            <div class="open">
+                Doors are Wide Open!
+            </div>
+
+            <p class="text">
+                Your clinic is currently accepting
+                appointments and walk-ins happily!
+            </p>
+
+
+            <div class="doctor">
+
+                <img src="doctor.png">
+
+                <div>
+                    <h3>Dr. Clara Evans</h3>
+                    <p>Lead Vet • Station 1</p>
+                </div>
+
+                <div class="duty">
+                    ✓ On Duty
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="box hours">
+
+            <h2>🕐 Today's Operating Hours</h2>
+
+            <p class="text">
+                Tap hours below to adjust schedule
+            </p>
+
+            <div class="time">
+
+                <div>
+                    <p>☀ Opening Time</p>
+                    <b>08:30 AM</b>
+                </div>
+
+                <div>
+                    <p>☾ Closing Time</p>
+                    <b>07:00 PM</b>
+                </div>
+
+            </div>
+
+
+            <div class="walk">
+
+                <div>
+                    <b>🚶 Accept Walk-ins Today</b>
+                    <br>
+                    <span>Immediate door visits welcome</span>
+                </div>
+
+                <div class="toggle">
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="break">
+
+            <div>
+                <h2>☕ Quick Break Mode</h2>
+                <p>Pause bookings for 1 hr<br>(Lunch & rest)</p>
+            </div>
+
+            <a class="pause" href="21_clinic_status.html">
+                ◉ Pause 1h
+            </a>
+
+        </div>
+
+
+        <div class="small">
+
+            <div class="card">
+                <b>📅 14</b>
+                <p>Scheduled</p>
+            </div>
+
+            <div class="card">
+                <b>▣ 3 In-Room</b>
+                <p>In Progress</p>
+            </div>
+
+        </div>
+
+
+        <a class="update" href="20_register_clinic.html">
+            ✓ Update Status
+        </a>
+
+        <p class="note">
+            🔔 Pet parents will be instantly notified in app
+        </p>
+
+    </div>
+
+</body>
+</html>
