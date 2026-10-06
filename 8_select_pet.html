@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Pet</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #fffafa;
+            font-family: Arial, sans-serif;
+            color: #211b20;
+        }
+
+        .page {
+            width: 1100px;
+            margin: auto;
+            padding: 100px 0;
+        }
+
+        /* Step */
+
+        .step {
+            width: 220px;
+            margin: auto;
+            padding: 15px;
+            background: #ffd9e5;
+            border-radius: 30px;
+            text-align: center;
+            color: #4d0929;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Progress */
+
+        .progress {
+            width: 600px;
+            height: 12px;
+            background: #eeeaea;
+            margin: 40px auto;
+            border-radius: 20px;
+        }
+
+        .bar {
+            width: 50%;
+            height: 12px;
+            background: #fa6094;
+            border-radius: 20px;
+        }
+
+        /* Heading */
+
+        .heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .heading h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+
+        .heading p {
+            font-size: 27px;
+            color: #654e58;
+            margin: 0;
+        }
+
+        /* Pet */
+
+        .pet {
+            width: 900px;
+            margin: 25px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 55px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            box-shadow: 0 4px 15px #eee;
+        }
+
+        .pet.gray {
+            background: #f8f6f6;
+        }
+
+        .pet img {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .pet-info {
+            margin-left: 45px;
+        }
+
+        .pet-info h2 {
+            margin: 0 0 10px;
+            font-size: 35px;
+        }
+
+        .pet-info p {
+            margin: 0;
+            font-size: 24px;
+            color: #654e58;
+        }
+
+        .vitals {
+            background: #5de3d6;
+            color: #063d3a;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        .select {
+            margin-left: auto;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #ff6297;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-size: 35px;
+        }
+
+        .plus {
+            background: #eeeaea;
+            color: #55444d;
+        }
+
+        /* Add Pet */
+
+        .add {
+            width: 900px;
+            margin: 35px auto 80px;
+            padding: 40px;
+            box-sizing: border-box;
+            background: #f9f7f7;
+            border-radius: 50px;
+            text-align: center;
+            color: #b42660;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .add-icon {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 50%;
+            background: #ffd9e5;
+            line-height: 80px;
+            font-size: 40px;
+        }
+
+        /* Information */
+
+        .info {
+            width: 900px;
+            margin: auto;
+            padding: 30px 40px;
+            box-sizing: border-box;
+            background: white;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 10px #eee;
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #5de3d6;
+            color: #08736d;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 23px;
+            line-height: 1.5;
+            color: #654e58;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- STEP -->
+
+    <div class="step">
+        🐾 STEP 2 OF 4
+    </div>
+
+
+    <!-- PROGRESS BAR -->
+
+    <div class="progress">
+
+        <div class="bar"></div>
+
+    </div>
+
+
+    <!-- HEADING -->
+
+    <div class="heading">
+
+        <h1>
+            Which pet needs help?
+        </h1>
+
+        <p>
+            Tap your pet to continue triage
+        </p>
+
+    </div>
+
+
+    <!-- MOJO -->
+
+    <a href="9_symptoms.html"
+       style="text-decoration: none; color: inherit;">
+
+        <div class="pet">
+
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=300">
+
+            <div class="pet-info">
+
+                <h2>
+                    Mojo
+
+                    <span class="vitals">
+                        ● Vitals Synced
+                    </span>
+                </h2>
+
+                <p>
+                    Golden Retriever • 3 yrs old
+                </p>
+
+            </div>
+
+            <div class="select">
+                ✓
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- LUNA -->
+
+    <a href="9_symptoms.html"
+       style="text-decoration: none; color: inherit;">
+
+        <div class="pet gray">
+
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=300">
+
+            <div class="pet-info">
+
+                <h2>
+                    Luna
+                </h2>
+
+                <p>
+                    British Shorthair • 1.5 yrs old
+                </p>
+
+            </div>
+
+            <div class="select plus">
+                +
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- ADD ANOTHER PET -->
+
+    <a href="4_profile.html"
+       style="text-decoration: none;">
+
+        <div class="add">
+
+            <span class="add-icon">
+                +
+            </span>
+
+            Add another pet
+
+        </div>
+
+    </a>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info">
+
+        <div class="info-icon">
+            ✚
+        </div>
+
+        <p>
+            PawPal tailors symptom triage to breed age
+            <br>
+            and medical records automatically.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
