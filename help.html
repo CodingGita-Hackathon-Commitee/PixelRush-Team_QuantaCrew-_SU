@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PawPal Help</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.help-head {
+    width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background: #fceafa;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.help-head div {
+    flex: 1;
+}
+
+.help-head h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.help-head p {
+    font-size: 21px;
+    color: #62545b;
+    line-height: 1.5;
+}
+
+.help-head .small {
+    color: #ff5785;
+    font-weight: bold;
+}
+
+.help-head img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.help {
+    width: 900px;
+    margin: auto;
+}
+
+.help > h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+.help-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.help-card {
+    background: white;
+    padding: 30px;
+    border-radius: 35px;
+    text-decoration: none;
+    color: #29152f;
+    box-shadow: 0 3px 10px #eadde3;
+}
+
+.help-card span {
+    font-size: 35px;
+}
+
+.help-card h3 {
+    font-size: 25px;
+    margin: 15px 0 8px;
+}
+
+.help-card p {
+    color: #806c75;
+    font-size: 18px;
+}
+
+
+.emergency {
+    margin-top: 35px;
+    padding: 30px;
+    background: #ffd9d9;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.emergency h2 {
+    color: #a5222c;
+    margin: 0;
+}
+
+.emergency p {
+    color: #70484b;
+    font-size: 18px;
+}
+
+.emergency a {
+    margin-left: auto;
+    text-decoration: none;
+    background: #ff5785;
+    color: white;
+    padding: 16px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+
+.contact {
+    text-align: center;
+    margin: 40px 0;
+    padding: 35px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 3px 10px #eadde3;
+}
+
+.contact h2 {
+    font-size: 30px;
+}
+
+.contact p {
+    color: #62545b;
+    font-size: 18px;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    background: #ff5785;
+    padding: 16px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+
+.back-home {
+    text-align: center;
+    margin: 35px;
+}
+
+.back-home a {
+    color: #c82b66;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <a href="index.html">🐾 Pet Parent</a>
+        <a href="1_clinic.html">🩺 Clinic & Vet</a>
+    </div>
+
+
+    <header class="help-head">
+
+        <div>
+            <p class="small">🐾 PawPal Support</p>
+
+            <h1>How can we help?</h1>
+
+            <p>
+                Find answers, get support and keep your
+                pet happy and healthy.
+            </p>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=400&q=80"
+            alt="Happy pets"
+        >
+
+    </header>
+
+
+    <main class="help">
+
+        <h2>What do you need help with?</h2>
+
+
+        <div class="help-grid">
+
+            <a href="home.html" class="help-card">
+                <span>🐶</span>
+                <h3>Pet Care</h3>
+                <p>Health tips, reminders and pet care.</p>
+            </a>
+
+
+            <a href="1_clinic.html" class="help-card">
+                <span>🩺</span>
+                <h3>Find a Vet</h3>
+                <p>Get help from a veterinary clinic.</p>
+            </a>
+
+
+            <a href="forgot.html" class="help-card">
+                <span>🔐</span>
+                <h3>Account Help</h3>
+                <p>Password and account related help.</p>
+            </a>
+
+
+            <a href="home.html" class="help-card">
+                <span>📅</span>
+                <h3>Appointments</h3>
+                <p>Manage your pet appointments.</p>
+            </a>
+
+        </div>
+
+
+        <div class="emergency">
+
+            <div>
+                <h2>🚨 Pet Emergency?</h2>
+
+                <p>
+                    Find a nearby veterinary clinic
+                    for urgent pet care.
+                </p>
+            </div>
+
+            <a href="1_clinic.html">Find a Clinic</a>
+
+        </div>
+
+
+        <div class="contact">
+
+            <h2>Still need help?</h2>
+
+            <p>
+                Our PawPal support team is here for you.
+            </p>
+
+            <a href="index.html">Contact PawPal Support</a>
+
+        </div>
+
+
+        <p class="back-home">
+            <a href="home.html">← Back to PawPal Home</a>
+        </p>
+
+    </main>
+
+</body>
+</html>

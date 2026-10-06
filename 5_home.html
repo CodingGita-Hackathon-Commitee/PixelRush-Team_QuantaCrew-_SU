@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PawPal - SOS Emergency</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+/* =================================
+   5_HOME - SOS EMERGENCY
+================================= */
+
+.home-body {
+    margin: 0;
+    background: #fff8fc;
+    color: #29152f;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* HEADER */
+
+.home-header {
+    width: 900px;
+    height: 120px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.back-button {
+    width: 62px;
+    height: 62px;
+
+    background: #f9e5fa;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #29152f;
+
+    font-size: 48px;
+    line-height: 1;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.home-logo small {
+    color: #ff5785;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.home-logo h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.home-profile {
+    margin-left: auto;
+
+    width: 58px;
+    height: 58px;
+
+    background: #c32161;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 28px;
+}
+
+
+/* MAIN */
+
+.home-main {
+    width: 900px;
+    margin: auto;
+}
+
+
+/* EMERGENCY INTRO */
+
+.emergency-intro {
+    background: #ffd9d6;
+
+    border-radius: 55px;
+
+    padding: 28px;
+
+    display: flex;
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+.emergency-icon {
+    width: 58px;
+    height: 58px;
+
+    background: #ffc8c4;
+
+    border-radius: 50%;
+
+    color: #bd292d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.emergency-intro h2 {
+    margin: 0;
+
+    color: #bd292d;
+
+    font-size: 30px;
+}
+
+.emergency-intro p {
+    margin: 8px 0 0;
+
+    color: #b5363c;
+
+    font-size: 22px;
+
+    line-height: 1.45;
+}
+
+
+/* HOTLINE */
+
+.hotline-card {
+    background: white;
+
+    margin-top: -20px;
+
+    border-radius: 55px;
+
+    padding: 50px 45px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-shadow: 0 5px 18px #eadde3;
+}
+
+.hotline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    background: #ff5785;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 80px;
+
+    padding: 28px;
+
+    font-size: 35px;
+
+    box-shadow: 0 12px 30px #ffc2d4;
+}
+
+.hotline span {
+    line-height: 1.35;
+}
+
+.wait {
+    margin: 25px 0 5px;
+
+    font-size: 20px;
+
+    color: #695660;
+}
+
+.wait b {
+    color: #b72a62;
+}
+
+
+/* QUICK GRID */
+
+.quick-grid {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.quick-card {
+    background: white;
+
+    min-height: 280px;
+
+    padding: 28px;
+
+    border-radius: 48px;
+
+    text-decoration: none;
+
+    color: #29152f;
+
+    box-sizing: border-box;
+}
+
+
+.quick-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.quick-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.purple {
+    background: #f4dcfa;
+    color: #bd2160;
+}
+
+.red {
+    background: #ffd6d3;
+    color: #bd292d;
+}
+
+.pink {
+    background: #ffd9e7;
+    color: #b52a60;
+}
+
+
+.badge {
+    background: #ffd8e2;
+
+    color: #5d1938;
+
+    padding: 8px 18px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.red-badge {
+    color: #bd292d;
+}
+
+.purple-badge {
+    background: #f2d9fb;
+}
+
+.live-badge {
+    background: #ff5785;
+    color: white;
+}
+
+
+.quick-card h2 {
+    margin: 28px 0 8px;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.quick-card p {
+    margin: 0;
+
+    color: #6d5963;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+}
+
+.distance {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #c12664;
+
+    font-size: 18px;
+}
+
+.red-text {
+    color: #c52d32;
+}
+
+
+/* PET CARD */
+
+.home-pet {
+    margin-top: 25px;
+
+    background: white;
+
+    border-radius: 50px;
+
+    padding: 30px 35px;
+
+    box-sizing: border-box;
+}
+
+
+.pet-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.pet-heading img {
+    width: 75px;
+    height: 75px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.pet-heading h2 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+
+.pet-heading h2 span {
+    font-size: 15px;
+
+    font-weight: 500;
+
+    background: #f5dafa;
+
+    color: #794466;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    vertical-align: middle;
+}
+
+
+.pet-heading p {
+    margin: 4px 0 0;
+
+    color: #695660;
+
+    font-size: 19px;
+}
+
+
+.pet-heading strong {
+    margin-left: auto;
+
+    color: #c32161;
+
+    font-size: 30px;
+}
+
+
+/* PET INFORMATION */
+
+.pet-info {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.pet-info div {
+    background: #f9e8fc;
+
+    padding: 18px;
+
+    border-radius: 45px;
+}
+
+.pet-info p {
+    margin: 0 0 5px;
+
+    color: #6d5963;
+
+    font-size: 16px;
+}
+
+.pet-info h3 {
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 500;
+}
+
+.pet-info .up {
+    color: #c32161;
+}
+
+
+/* RECORDS */
+
+.records {
+    display: block;
+
+    margin-top: 25px;
+
+    background: #ff5785;
+
+    color: white;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-radius: 45px;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* CALM MESSAGE */
+
+.calm {
+    margin: 30px 0 50px;
+
+    padding: 22px;
+
+    background: #f9e7fc;
+
+    border-radius: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.calm span {
+    width: 50px;
+    height: 50px;
+
+    background: #efd1fa;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #c32161;
+
+    font-size: 25px;
+}
+
+.calm p {
+    margin: 0;
+
+    color: #665361;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+}
+
+    </style>
+</head>
+
+<body class="home-body">
+
+    <!-- HEADER -->
+
+    <header class="home-header">
+
+        <a href="index.html" class="back-button">
+            ‹
+        </a>
+
+        <div class="home-logo">
+            <small>🐾 PawPal</small>
+            <h1>Sos Emergency</h1>
+        </div>
+
+        <a href="4_profile.html" class="home-profile">
+            ♙
+        </a>
+
+    </header>
+
+
+    <main class="home-main">
+
+
+        <!-- EMERGENCY INTRO -->
+
+        <section class="emergency-intro">
+
+            <div class="emergency-icon">
+                ✱
+            </div>
+
+            <div>
+                <h2>24/7 Emergency Triage ●</h2>
+
+                <p>
+                    Immediate guidance for acute
+                    distress, choking, trauma, or toxic
+                    ingestion
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- HOTLINE -->
+
+        <section class="hotline-card">
+
+            <a href="8_select_pet.html"  class="hotline">
+                ☎
+                <span>
+                    Call 24/7 ER Vet<br>
+                    Hotline
+                </span>
+            </a>
+
+            <p class="wait">
+                ⏱ Avg wait: &lt; 30s •
+                <b>100% Free Triage</b>
+            </p>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="quick-grid">
+
+
+            <a href="16_clinics_status.html" class="quick-card">
+
+                <div class="quick-top">
+                    <span class="quick-icon purple">
+                        ✚
+                    </span>
+
+                    <span class="badge">
+                        Open 24h
+                    </span>
+                </div>
+
+                <h2>Nearest ER</h2>
+
+                <p>Stravet ER Clinic</p>
+
+                <span class="distance">
+                    ◇ 1.2 mi away
+                </span>
+
+            </a>
+
+
+            <a href="6_posion.html" class="quick-card">
+
+                <div class="quick-top">
+                    <span class="quick-icon red">
+                        !
+                    </span>
+
+                    <span class="badge red-badge">
+                        Priority
+                    </span>
+                </div>
+
+                <h2>Poison Control</h2>
+
+                <p>
+                    Instant ingest hotline &
+                    toxic checker
+                </p>
+
+                <span class="distance red-text">
+                    ☎ Direct Connect
+                </span>
+
+            </a>
+
+
+            <a href="17_book_appointment.html" class="quick-card">
+
+                <div class="quick-top">
+                    <span class="quick-icon pink">
+                        ✚
+                    </span>
+
+                    <span class="badge purple-badge">
+                        Guides
+                    </span>
+                </div>
+
+                <h2>
+                    Book<br>
+                    Appointment
+                </h2>
+
+                <p>
+                    Choking, heat stroke,
+                    bleeding & CPR
+                </p>
+
+                <span class="distance">
+                    ◉ 4 Quick Cards
+                </span>
+
+            </a>
+
+
+            <a href="7_checkup.html" class="quick-card">
+
+                <div class="quick-top">
+                    <span class="quick-icon pink">
+                        ■
+                    </span>
+
+                    <span class="badge live-badge">
+                        Live Vet
+                    </span>
+                </div>
+
+                <h2>
+                    Routin<br>
+                    checkup
+                </h2>
+
+                <p>
+                    Show pet symptoms to
+                    licensed doctor
+                </p>
+
+                <span class="distance">
+                    ⚡ Start in 60s
+                </span>
+
+            </a>
+
+
+        </section>
+
+
+        <!-- PET CARD -->
+
+        <section class="home-pet">
+
+            <div class="pet-heading">
+
+                <img
+                    src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=200&q=80"
+                    alt="Buddy"
+                >
+
+                <div>
+                    <h2>
+                        Buddy
+                        <span>Active Pet</span>
+                    </h2>
+
+                    <p>
+                        Golden Retriever • 7 mos • 18 kg
+                    </p>
+                </div>
+
+                <strong>🐾</strong>
+
+            </div>
+
+
+            <div class="pet-info">
+
+                <div>
+                    <p>Microchip ID</p>
+                    <h3>#98514-A2</h3>
+                </div>
+
+                <div>
+                    <p>Allergies</p>
+                    <h3>None Reported</h3>
+                </div>
+
+                <div>
+                    <p>Rabies Vaccine</p>
+                    <h3 class="up">
+                        ◉ Up to Date
+                    </h3>
+                </div>
+
+                <div>
+                    <p>Blood Type</p>
+                    <h3>DEA 1.1 Positive</h3>
+                </div>
+
+            </div>
+
+
+            <a href="18_history.html" class="records">
+                Records & History
+            </a>
+
+        </section>
+
+
+        <!-- BOTTOM MESSAGE -->
+
+        <section class="calm">
+
+            <span>♥</span>
+
+            <p>
+                Keep calm. Speak clearly with the triage
+                nurse. We are with you every second.
+            </p>
+
+        </section>
+
+
+    </main>
+
+</body>
+</html>
