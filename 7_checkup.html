@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PawPal - Annual Health Checkup</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =================================
+   7_CHECKUP
+================================= */
+
+.checkup-body {
+    margin: 0;
+    background: #fff8fc;
+    color: #29152f;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* HEADER */
+
+.checkup-header {
+    width: 900px;
+    height: 120px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.checkup-back {
+    width: 62px;
+    height: 62px;
+
+    background: #f9e5fa;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #29152f;
+    text-decoration: none;
+
+    font-size: 48px;
+}
+
+.checkup-logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.checkup-logo small {
+    color: #ff5785;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.checkup-logo h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.checkup-profile {
+    margin-left: auto;
+
+    width: 58px;
+    height: 58px;
+
+    background: #c32161;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-size: 28px;
+}
+
+
+/* MAIN */
+
+.checkup-main {
+    width: 900px;
+    margin: auto;
+}
+
+
+/* HEADING */
+
+.checkup-heading {
+    padding: 5px 45px 25px;
+}
+
+.checkup-heading > p {
+    margin: 0 0 5px;
+
+    color: #bd2160;
+
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.heading-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.heading-row h2 {
+    margin: 0;
+
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.paw-title {
+    width: 42px;
+    height: 42px;
+
+    background: #ffdce9;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.verified-check {
+    margin-left: auto;
+
+    background: #f1dafa;
+    color: #bd2160;
+
+    padding: 9px 18px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+}
+
+
+/* HEALTH CARD */
+
+.health-card {
+    background: white;
+
+    border-radius: 45px;
+
+    padding: 28px;
+
+    box-sizing: border-box;
+}
+
+
+/* PET SUMMARY */
+
+.pet-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkup-pet-image {
+    position: relative;
+}
+
+.checkup-pet-image img {
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #ff7eaa;
+}
+
+.checkup-pet-image span {
+    position: absolute;
+
+    right: -8px;
+    bottom: 0;
+
+    width: 35px;
+    height: 35px;
+
+    background: #bd2160;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pet-summary-text h2 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+.pet-summary-text h2 span {
+    background: #ffd9e5;
+
+    color: #8f3157;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+}
+
+.pet-summary-text p {
+    margin: 5px 0;
+
+    color: #695660;
+
+    font-size: 17px;
+}
+
+
+/* VITAL SCORE */
+
+.vital-score {
+    margin-top: 20px;
+
+    background: #f9e6fc;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.score-icon {
+    width: 55px;
+    height: 55px;
+
+    background: #ff5785;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.vital-score p {
+    margin: 0;
+
+    color: #62545b;
+}
+
+.vital-score h3 {
+    margin: 2px 0 0;
+
+    color: #bd2160;
+
+    font-size: 21px;
+}
+
+.vital-score > strong {
+    margin-left: auto;
+
+    background: white;
+
+    padding: 12px 22px;
+
+    border-radius: 35px;
+
+    font-size: 30px;
+}
+
+.vital-score > strong small {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* DOCTOR */
+
+.doctor-row {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #695660;
+
+    font-size: 17px;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.section-heading > span {
+    color: #bd2160;
+}
+
+
+/* VITALS */
+
+.vitals {
+    margin-top: 30px;
+}
+
+.vitals-grid {
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.vital-box {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 38px;
+
+    min-height: 130px;
+
+    box-sizing: border-box;
+}
+
+.vital-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.vital-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #ffdce9;
+
+    color: #bd2160;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.vital-top b {
+    background: #f6ddfa;
+
+    color: #bd2160;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+.vital-box p {
+    margin: 15px 0 3px;
+
+    color: #695660;
+
+    font-size: 16px;
+}
+
+.vital-box h3 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+.vital-box h3 small {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* PHYSICAL EXAM */
+
+.physical {
+    margin-top: 30px;
+}
+
+.system-count {
+    background: #f4dafa;
+
+    color: #bd2160;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+.section-heading p {
+    color: #695660;
+}
+
+
+/* EXAM ITEMS */
+
+.exam-list {
+    margin-top: 15px;
+}
+
+.exam-item {
+    background: white;
+
+    min-height: 85px;
+
+    margin-bottom: 12px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-sizing: border-box;
+}
+
+.exam-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    background: #f6dcfa;
+
+    color: #bd2160;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.exam-item h3 {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+.exam-item p {
+    margin: 3px 0 0;
+
+    color: #695660;
+
+    font-size: 15px;
+}
+
+.exam-item > b {
+    margin-left: auto;
+
+    background: #f7ddfb;
+
+    color: #bd2160;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+}
+
+.exam-item .mild {
+    background: #ffdce7;
+}
+
+
+/* REMARKS */
+
+.remarks {
+    margin-top: 28px;
+
+    background: #f9e5fc;
+
+    border-radius: 40px;
+
+    padding: 25px;
+}
+
+.quote {
+    background: white;
+
+    padding: 20px;
+
+    border-left: 4px solid #bd2160;
+}
+
+.quote b {
+    color: #bd2160;
+
+    font-size: 15px;
+}
+
+.quote p {
+    margin: 10px 0 0;
+
+    font-size: 19px;
+
+    line-height: 1.45;
+
+    font-style: italic;
+}
+
+.prescription {
+    margin-top: 18px;
+
+    background: white;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.medicine-icon,
+.bell {
+    width: 50px;
+    height: 50px;
+
+    background: #ffdce8;
+
+    color: #bd2160;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.prescription p {
+    margin: 0;
+
+    color: #695660;
+}
+
+.prescription h3 {
+    margin: 2px 0;
+
+    font-size: 20px;
+}
+
+.prescription > div > span {
+    color: #bd2160;
+}
+
+.bell {
+    margin-left: auto;
+}
+
+
+/* BUTTONS */
+
+.download-checkup,
+.followup {
+    display: block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 20px;
+
+    border-radius: 40px;
+
+    margin-top: 25px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.download-checkup {
+    background: #ff5785;
+    color: white;
+
+    box-shadow: 0 8px 18px #ffd0df;
+}
+
+.followup {
+    background: #f5dcfb;
+    color: #321531;
+
+    margin-bottom: 45px;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+<body class="checkup-body">
+
+    <!-- HEADER -->
+
+    <header class="checkup-header">
+
+        <a href="5_home.html" class="checkup-back">
+            ‹
+        </a>
+
+        <div class="checkup-logo">
+            <small>🐾 PawPal</small>
+            <h1>Sos Emergency</h1>
+        </div>
+
+        <a href="4_profile.html" class="checkup-profile">
+            ♙
+        </a>
+
+    </header>
+
+
+    <main class="checkup-main">
+
+
+        <!-- TITLE -->
+
+        <section class="checkup-heading">
+
+            <p>OFFICIAL CLINICAL RECORD</p>
+
+            <div class="heading-row">
+
+                <span class="paw-title">🐾</span>
+
+                <h2>
+                    Annual Health<br>
+                    Checkup
+                </h2>
+
+                <span class="verified-check">
+                    ✹ Verified
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PET / HEALTH SUMMARY -->
+
+        <section class="health-card">
+
+            <div class="pet-summary">
+
+                <div class="checkup-pet-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80"
+                        alt="Buddy"
+                    >
+
+                    <span>♥</span>
+
+                </div>
+
+
+                <div class="pet-summary-text">
+
+                    <h2>
+                        Buddy
+                        <span>Puppy</span>
+                    </h2>
+
+                    <p>
+                        Golden Retriever • 7 Months Old
+                    </p>
+
+                    <p>
+                        ♧ Paws & Whiskers Animal Hospital
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VITAL SCORE -->
+
+            <div class="vital-score">
+
+                <div class="score-icon">
+                    ✚
+                </div>
+
+                <div>
+                    <p>Overall Vital Score</p>
+                    <h3>Peak Health</h3>
+                </div>
+
+                <strong>
+                    98 <small>/100</small>
+                </strong>
+
+            </div>
+
+
+            <div class="doctor-row">
+
+                <span>
+                    ⚕ Dr. Emily Smith, DVM
+                </span>
+
+                <span>
+                    Oct 14, 2025
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- VITALS -->
+
+        <section class="vitals">
+
+            <div class="section-heading">
+
+                <h2>Vitals Matrix</h2>
+
+                <span>
+                    ● All In Target
+                </span>
+
+            </div>
+
+
+            <div class="vitals-grid">
+
+
+                <div class="vital-box">
+
+                    <div class="vital-top">
+                        <span class="vital-icon">♨</span>
+                        <b>Normal</b>
+                    </div>
+
+                    <p>Body Temp</p>
+
+                    <h3>
+                        101.4<small>°F</small>
+                    </h3>
+
+                </div>
+
+
+                <div class="vital-box">
+
+                    <div class="vital-top">
+                        <span class="vital-icon">♥</span>
+                        <b>Calm</b>
+                    </div>
+
+                    <p>Heart Rate</p>
+
+                    <h3>
+                        108 <small>bpm</small>
+                    </h3>
+
+                </div>
+
+
+                <div class="vital-box">
+
+                    <div class="vital-top">
+                        <span class="vital-icon">⚖</span>
+                        <b>+1.2 kg</b>
+                    </div>
+
+                    <p>Current Weight</p>
+
+                    <h3>
+                        18.4 <small>kg</small>
+                    </h3>
+
+                </div>
+
+
+                <div class="vital-box">
+
+                    <div class="vital-top">
+                        <span class="vital-icon">♢</span>
+                        <b>Skin Turgor</b>
+                    </div>
+
+                    <p>Hydration</p>
+
+                    <h3>Optimal</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PHYSICAL EXAM -->
+
+        <section class="physical">
+
+            <div class="section-heading">
+
+                <h2>
+                    Physical Exam
+                    <span class="system-count">5 Systems</span>
+                </h2>
+
+                <p>Tap to inspect</p>
+
+            </div>
+
+
+            <div class="exam-list">
+
+
+                <div class="exam-item">
+
+                    <span class="exam-icon">
+                        ◉
+                    </span>
+
+                    <div>
+                        <h3>Eyes & Ears</h3>
+                        <p>Clear cornea, clean ear canals</p>
+                    </div>
+
+                    <b>● Clear & Alert</b>
+
+                </div>
+
+
+                <div class="exam-item">
+
+                    <span class="exam-icon">
+                        ♡
+                    </span>
+
+                    <div>
+                        <h3>Teeth & Gums</h3>
+                        <p>Dental chew advised</p>
+                    </div>
+
+                    <b class="mild">ⓘ Mild Tartar</b>
+
+                </div>
+
+
+                <div class="exam-item">
+
+                    <span class="exam-icon">
+                        ♧
+                    </span>
+
+                    <div>
+                        <h3>Heart & Lungs</h3>
+                        <p>Normal Sinus Rhythm, 110 bpm</p>
+                    </div>
+
+                    <b>● Normal</b>
+
+                </div>
+
+
+                <div class="exam-item">
+
+                    <span class="exam-icon">
+                        ☼
+                    </span>
+
+                    <div>
+                        <h3>Coat & Skin</h3>
+                        <p>Glossy, flea-free, healthy barrier</p>
+                    </div>
+
+                    <b>● Glossy</b>
+
+                </div>
+
+
+                <div class="exam-item">
+
+                    <span class="exam-icon">
+                        ♟
+                    </span>
+
+                    <div>
+                        <h3>Joints & Mobility</h3>
+                        <p>Excellent range, hips stable</p>
+                    </div>
+
+                    <b>● Flexible</b>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DOCTOR REMARKS -->
+
+        <section class="remarks">
+
+            <div class="quote">
+
+                <b>❞ &nbsp; DR. EMILY'S REMARKS</b>
+
+                <p>
+                    “Buddy is growing at an incredible,
+                    healthy pace! Continue Royal Canin
+                    puppy kibble and add dental treats
+                    twice a week.”
+                </p>
+
+            </div>
+
+
+            <div class="prescription">
+
+                <span class="medicine-icon">
+                    ▣
+                </span>
+
+                <div>
+                    <p>Prescribed Preventative</p>
+
+                    <h3>NexGard Chewable</h3>
+
+                    <span>1 tablet monthly with meal</span>
+                </div>
+
+                <span class="bell">
+                    ♧
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUTTONS -->
+
+        <a href="#" class="download-checkup">
+            ▣ &nbsp; Download Checkup PDF
+        </a>
+
+
+        <a href="#" class="followup">
+            ▦ &nbsp; Book Follow-up Exam
+        </a>
+
+
+    </main>
+
+</body>
+</html>
