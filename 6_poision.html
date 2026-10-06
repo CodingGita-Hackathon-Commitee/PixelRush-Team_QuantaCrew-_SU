@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PawPal - Growth</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+/* =================================
+   6_POISION - GROWTH PAGE
+================================= */
+
+.growth-body {
+    margin: 0;
+    background: #fff8fc;
+    color: #29152f;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+/* HEADER */
+
+.growth-header {
+    width: 900px;
+    height: 120px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.growth-back {
+    width: 62px;
+    height: 62px;
+
+    background: #f9e5fa;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #29152f;
+
+    font-size: 48px;
+}
+
+.growth-logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.growth-logo small {
+    color: #ff5785;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.growth-logo h1 {
+    margin: 0;
+
+    font-size: 36px;
+
+    font-weight: 600;
+}
+
+.growth-profile {
+    margin-left: auto;
+
+    width: 58px;
+    height: 58px;
+
+    background: #c32161;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 28px;
+}
+
+
+/* MAIN */
+
+.growth-main {
+    width: 900px;
+    margin: auto;
+}
+
+
+/* PET HEADER */
+
+.growth-pet {
+    background: linear-gradient(
+        110deg,
+        #fcecff,
+        #fde4f3
+    );
+
+    border-radius: 45px;
+
+    padding: 30px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+.growth-pet img {
+    width: 105px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.growth-pet h2 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+.growth-pet p {
+    margin: 5px 0 0;
+
+    color: #695660;
+
+    font-size: 20px;
+
+    line-height: 1.45;
+}
+
+.growing {
+    margin-left: auto;
+
+    background: #f7e2fb;
+
+    color: #bd2461;
+
+    padding: 12px 28px;
+
+    border-radius: 40px;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* CURRENT WEIGHT */
+
+.weight-card {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 45px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 10px #eadfe4;
+}
+
+.weight-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.weight-top h2 {
+    margin: 0;
+
+    color: #66535d;
+
+    font-size: 23px;
+}
+
+.weight-top span {
+    background: #ffd9e4;
+
+    color: #4d1734;
+
+    padding: 9px 22px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    font-size: 17px;
+}
+
+.weight-number {
+    margin-top: 25px;
+
+    font-size: 58px;
+
+    font-weight: 700;
+}
+
+.weight-number small {
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+.weight-number em {
+    color: #967e88;
+
+    font-size: 20px;
+
+    font-style: normal;
+
+    font-weight: 400;
+}
+
+.healthy {
+    margin-top: 25px;
+
+    padding: 12px 20px;
+
+    background: #f7ddfb;
+
+    font-size: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.healthy b {
+    color: #c32161;
+
+    font-weight: 600;
+}
+
+
+/* GROWTH CURVE */
+
+.curve-card {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 45px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 5px 10px #eadfe4;
+}
+
+.curve-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.curve-title h2 {
+    margin: 0;
+
+    font-size: 32px;
+}
+
+.curve-title p {
+    margin: 3px 0;
+
+    color: #695660;
+
+    font-size: 19px;
+}
+
+.switch {
+    background: #f7ddfb;
+
+    border-radius: 30px;
+
+    padding: 5px;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
+.switch span {
+    padding: 8px 20px;
+
+    color: #695660;
+}
+
+.switch b {
+    background: #bd2160;
+
+    color: white;
+
+    padding: 8px 20px;
+
+    border-radius: 25px;
+}
+
+
+/* GRAPH */
+
+.graph {
+    height: 310px;
+
+    margin-top: 25px;
+
+    position: relative;
+}
+
+.line {
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+
+    border-top: 2px dashed #f2d7f4;
+}
+
+.line-one {
+    top: 65px;
+}
+
+.line-two {
+    top: 135px;
+}
+
+.line-three {
+    top: 205px;
+}
+
+
+/* GRAPH LINE */
+
+.growth-line {
+    position: absolute;
+
+    width: 75%;
+
+    height: 5px;
+
+    background: #ff5785;
+
+    left: 45px;
+
+    top: 210px;
+
+    transform: rotate(-18deg);
+
+    transform-origin: left;
+}
+
+
+/* POINTS */
+
+.point {
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    background: white;
+
+    border: 5px solid #ff5785;
+
+    border-radius: 50%;
+}
+
+.point-one {
+    left: 40px;
+    top: 198px;
+}
+
+.point-two {
+    left: 270px;
+    top: 160px;
+}
+
+.point-three {
+    left: 520px;
+    top: 95px;
+}
+
+.point-four {
+    right: 40px;
+    top: 55px;
+
+    background: #bd2160;
+    border-color: #bd2160;
+}
+
+
+/* GRAPH LABELS */
+
+.graph-labels {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 45px;
+    right: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #8a747d;
+
+    font-size: 16px;
+}
+
+.graph-labels b {
+    color: #bd2160;
+}
+
+
+/* MILESTONE */
+
+.milestone {
+    background: #f5dafa;
+
+    padding: 12px 20px;
+
+    border-radius: 35px;
+
+    font-size: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.milestone b {
+    color: #bd2160;
+}
+
+
+/* TARGET */
+
+.target-card {
+    margin-top: 30px;
+
+    background: #f8ddfc;
+
+    border-radius: 45px;
+
+    padding: 35px;
+
+    box-sizing: border-box;
+}
+
+.target-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.target-top h2 {
+    margin: 0;
+
+    font-size: 31px;
+
+    font-weight: 500;
+}
+
+.target-top span {
+    background: white;
+
+    padding: 10px 25px;
+
+    border-radius: 35px;
+
+    color: #695660;
+
+    font-size: 17px;
+}
+
+.target-weight {
+    margin-top: 25px;
+
+    font-size: 55px;
+
+    font-weight: 700;
+}
+
+.target-weight small {
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+.target-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.target-bottom p {
+    color: #695660;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+}
+
+.target-bottom strong {
+    color: #bd2160;
+
+    font-size: 30px;
+
+    text-align: center;
+}
+
+.target-bottom strong small {
+    display: block;
+
+    color: #695660;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+.progress {
+    height: 18px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+
+    width: 61%;
+
+    height: 100%;
+
+    background: #bd2160;
+
+    border-radius: 20px;
+}
+
+
+/* HISTORY */
+
+.history {
+    margin-top: 35px;
+}
+
+.history-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.history-title h2 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.history-title h2 span {
+    background: #ffd9e4;
+
+    color: #65183b;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+}
+
+.history-title a {
+    color: #bd2160;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* HISTORY CARD */
+
+.history-card {
+    margin-top: 10px;
+
+    background: white;
+
+    min-height: 115px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 2px 5px #eee4e8;
+}
+
+.history-icon {
+    width: 58px;
+    height: 58px;
+
+    background: #f5ddfa;
+
+    color: #bd2160;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.history-card h3 {
+    margin: 0;
+
+    font-size: 24px;
+}
+
+.history-card h3 span {
+    background: #ffd9e4;
+
+    color: #5b1737;
+
+    padding: 4px 9px;
+
+    border-radius: 15px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+.history-card h3 .base {
+    background: #eadafa;
+}
+
+.history-card p {
+    margin: 3px 0 0;
+
+    color: #695660;
+
+    font-size: 17px;
+}
+
+.history-card > strong {
+    margin-left: auto;
+
+    color: #8b747e;
+
+    font-size: 24px;
+}
+
+.home-icon {
+    background: #f9e7fc;
+}
+
+.clinic-icon {
+    background: #ffd9e5;
+}
+
+
+/* BOTTOM SPACE */
+
+.history {
+    margin-bottom: 50px;
+}
+
+
+
+    </style>
+</head>
+
+<body class="growth-body">
+
+    <!-- HEADER -->
+
+    <header class="growth-header">
+
+        <a href="5_home.html" class="growth-back">
+            ‹
+        </a>
+
+        <div class="growth-logo">
+            <small>🐾 PawPal</small>
+            <h1>Sos Emergency</h1>
+        </div>
+
+        <a href="4_profile.html" class="growth-profile">
+            ♙
+        </a>
+
+    </header>
+
+
+    <main class="growth-main">
+
+
+        <!-- PET HEADER -->
+
+        <section class="growth-pet">
+
+            <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80"
+                alt="Buddy"
+            >
+
+            <div>
+                <h2>Buddy 🐾</h2>
+
+                <p>
+                    Golden Retriever •<br>
+                    7 mos
+                </p>
+            </div>
+
+            <span class="growing">
+                🎉 Growing<br>
+                fast!
+            </span>
+
+        </section>
+
+
+
+        <!-- CURRENT WEIGHT -->
+
+        <section class="weight-card">
+
+            <div class="weight-top">
+
+                <h2>
+                    ⚖ Current Weight
+                </h2>
+
+                <span>
+                    ↗ +1.2 kg this month
+                </span>
+
+            </div>
+
+
+            <div class="weight-number">
+                18.4
+                <small>kg</small>
+
+                <em>/ ~40.5 lbs</em>
+            </div>
+
+
+            <div class="healthy">
+                ♥ Healthy growth rate
+
+                <b>
+                    ✨ Peak Vitality
+                </b>
+            </div>
+
+        </section>
+
+
+
+        <!-- GROWTH CURVE -->
+
+        <section class="curve-card">
+
+            <div class="curve-title">
+
+                <div>
+                    <h2>Growth Curve</h2>
+
+                    <p>Milestone trajectory</p>
+                </div>
+
+
+                <div class="switch">
+
+                    <span>Weekly</span>
+
+                    <b>Monthly</b>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIMPLE CSS GRAPH -->
+
+            <div class="graph">
+
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+                <div class="line line-three"></div>
+
+                <div class="growth-line"></div>
+
+                <span class="point point-one"></span>
+                <span class="point point-two"></span>
+                <span class="point point-three"></span>
+                <span class="point point-four"></span>
+
+                <div class="graph-labels">
+                    <span>8 wks</span>
+                    <span>16 wks</span>
+                    <span>6 mos</span>
+                    <b>7 mos</b>
+                </div>
+
+            </div>
+
+
+            <div class="milestone">
+
+                ⚑ Active milestone: 7 mos (18.4 kg)
+
+                <b>Standard Range</b>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TARGET ADULT WEIGHT -->
+
+        <section class="target-card">
+
+            <div class="target-top">
+
+                <div>
+                    <h2>
+                        ◉ Target Adult<br>
+                        Weight
+                    </h2>
+                </div>
+
+                <span>
+                    Predictive<br>
+                    Model
+                </span>
+
+            </div>
+
+
+            <div class="target-weight">
+                28 - 32
+                <small>kg</small>
+            </div>
+
+
+            <div class="target-bottom">
+
+                <p>
+                    Estimated mature target at 14-16<br>
+                    months
+                </p>
+
+                <strong>
+                    61%
+                    <small>Adult size<br>reached</small>
+                </strong>
+
+            </div>
+
+
+            <div class="progress">
+                <span></span>
+            </div>
+
+        </section>
+
+
+
+        <!-- WEIGHT HISTORY -->
+
+        <section class="history">
+
+            <div class="history-title">
+
+                <h2>
+                    Weight History
+                    <span>3 logs</span>
+                </h2>
+
+                <a href="#">
+                    Export
+                </a>
+
+            </div>
+
+
+            <!-- HISTORY 1 -->
+
+            <div class="history-card">
+
+                <div class="history-icon">
+                    ✹
+                </div>
+
+                <div>
+                    <h3>
+                        18.4 kg
+                        <span>+1.2 kg</span>
+                    </h3>
+
+                    <p>
+                        Oct 10 • Vet recorded
+                    </p>
+                </div>
+
+                <strong>
+                    ♡
+                </strong>
+
+            </div>
+
+
+            <!-- HISTORY 2 -->
+
+            <div class="history-card">
+
+                <div class="history-icon home-icon">
+                    ⌂
+                </div>
+
+                <div>
+                    <h3>
+                        17.2 kg
+                        <span>+2.2 kg</span>
+                    </h3>
+
+                    <p>
+                        Sep 15 • Home scale
+                    </p>
+                </div>
+
+                <strong>
+                    ▣
+                </strong>
+
+            </div>
+
+
+            <!-- HISTORY 3 -->
+
+            <div class="history-card">
+
+                <div class="history-icon clinic-icon">
+                    ✚
+                </div>
+
+                <div>
+                    <h3>
+                        15.0 kg
+                        <span class="base">Base</span>
+                    </h3>
+
+                    <p>
+                        Aug 14 • Clinic visit
+                    </p>
+                </div>
+
+                <strong>
+                    ⚕
+                </strong>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</body>
+</html>
