@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accept Appointment</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fcf5ff;
+            font-family: Arial, sans-serif;
+            color: #241642;
+        }
+
+        .page {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .top {
+            height: 120px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 35px;
+        }
+
+        .back {
+            font-size: 40px;
+            text-decoration: none;
+            color: #241642;
+        }
+
+        .title {
+            font-size: 30px;
+            margin-left: -100px;
+        }
+
+        .user {
+            background: #b72d62;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .request {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 30px 60px;
+            font-size: 23px;
+            color: #5f5057;
+        }
+
+        .new {
+            background: #ffe0e8;
+            color: #b72d62;
+            padding: 10px 25px;
+            border-radius: 30px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 70px;
+            padding: 45px;
+            box-shadow: 0 5px 20px #eadceb;
+        }
+
+        .pet {
+            display: flex;
+            align-items: center;
+        }
+
+        .pet img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 30px;
+        }
+
+        .pet h1 {
+            font-size: 40px;
+            margin: 0 0 15px;
+        }
+
+        .type {
+            background: #e9ddff;
+            color: #51458d;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 19px;
+        }
+
+        .pet p {
+            font-size: 22px;
+            color: #66565e;
+            margin: 12px 0;
+        }
+
+        .distance {
+            color: #b72d62 !important;
+        }
+
+        .info {
+            background: #f2e8ff;
+            border-radius: 45px;
+            padding: 25px 30px;
+            margin-top: 30px;
+        }
+
+        .info h3 {
+            margin: 0 0 8px;
+            color: #5d5057;
+            font-size: 21px;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .reason {
+            margin-top: 35px;
+        }
+
+        .reason h2,
+        .notes h2 {
+            font-size: 24px;
+        }
+
+        .reason p {
+            background: #f0e6ff;
+            border-radius: 40px;
+            padding: 25px 30px;
+            font-size: 25px;
+            line-height: 1.5;
+        }
+
+        .notes p {
+            background: #fff0e3;
+            border-radius: 45px;
+            padding: 30px;
+            font-size: 23px;
+            line-height: 1.5;
+        }
+
+        .accept {
+            display: block;
+            background: #ff6293;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 25px;
+            border-radius: 50px;
+            margin-top: 45px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .decline {
+            display: block;
+            background: #eee4ff;
+            color: #554b55;
+            text-decoration: none;
+            text-align: center;
+            padding: 25px;
+            border-radius: 50px;
+            margin-top: 15px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Header -->
+    <div class="top">
+
+        <a class="back" href="20_register_clinic.html">
+            ←
+        </a>
+
+        <div class="title">
+            🐾 Clinic Details
+        </div>
+
+        <div class="user">
+            ♙
+        </div>
+
+    </div>
+
+
+    <!-- Request -->
+    <div class="request">
+
+        <div>
+            🔔 Incoming Request
+        </div>
+
+        <div class="new">
+            Just now
+        </div>
+
+    </div>
+
+
+    <!-- Appointment -->
+    <div class="box">
+
+        <!-- Pet -->
+        <div class="pet">
+
+            <img src="dog.png">
+
+            <div>
+
+                <h1>Milo</h1>
+
+                <span class="type">
+                    Dog • 6 Mos
+                </span>
+
+                <p>◎ Sarah Jenkins</p>
+
+                <p class="distance">
+                    ➤ 0.8 km away
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Appointment Time -->
+        <div class="info">
+
+            <h3>📅 Appointment Time</h3>
+
+            <p>
+                Tomorrow, Oct 15 • 11:00 AM
+            </p>
+
+        </div>
+
+
+        <!-- Reason -->
+        <div class="reason">
+
+            <h2>
+                🏥 Reason for Visit
+            </h2>
+
+            <p>
+                Routine Vaccination & Gentle Tummy Check
+            </p>
+
+        </div>
+
+
+        <!-- Notes -->
+        <div class="notes">
+
+            <h2>
+                ♡ Pet Parent Notes
+            </h2>
+
+            <p>
+                ⓘ “First clinic visit, Milo loves tummy
+                rubs and gets nervous with loud clippers!”
+            </p>
+
+        </div>
+
+
+        <!-- Buttons -->
+        <a class="accept" href="13_receipt.html">
+            ✓ Accept Appointment
+        </a>
+
+        <a class="decline" href="23_msg.html">
+            ⊗ Decline Request
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
