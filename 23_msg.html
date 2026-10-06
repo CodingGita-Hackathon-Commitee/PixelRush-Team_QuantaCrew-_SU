@@ -3,6 +3,8 @@
 <head>
     <title>Chat Thread</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         * {
             box-sizing: border-box;
@@ -16,66 +18,70 @@
         }
 
         .page {
-            max-width: 700px;
+            width: 100%;
+            max-width: 430px;
+            min-height: 100vh;
             margin: auto;
-            padding: 20px;
+            background: #fff7fc;
         }
 
-        /* Header */
+        /* HEADER */
 
         .top {
-            height: 120px;
+            height: 140px;
             background: white;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 20px 35px;
+            padding: 20px 25px;
         }
 
         .back {
-            background: #f4e7ff;
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
+            background: #f4e5ff;
             border-radius: 50%;
-            text-decoration: none;
             color: #241642;
-            font-size: 45px;
+            text-decoration: none;
+            font-size: 42px;
             text-align: center;
-            padding-top: 5px;
+            line-height: 58px;
         }
 
         .title {
-            font-size: 35px;
-            margin-left: -70px;
+            font-size: 30px;
+            margin-left: -10px;
         }
 
         .user {
+            width: 62px;
+            height: 62px;
             background: #b72d62;
             color: white;
-            width: 60px;
-            height: 60px;
             border-radius: 50%;
             text-align: center;
-            padding-top: 17px;
+            line-height: 62px;
+            font-size: 25px;
         }
 
-        /* Clinic */
+
+        /* CLINIC */
 
         .clinic {
-            background: #fdf0ff;
-            border-radius: 60px;
+            margin: 0 25px;
             padding: 25px;
+            background: #fdf0ff;
+            border-radius: 55px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
 
         .clinic img {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
         .clinic-info {
@@ -83,41 +89,42 @@
         }
 
         .clinic-info h1 {
-            margin: 0;
-            font-size: 32px;
+            font-size: 25px;
+            margin: 0 0 8px;
         }
 
         .clinic-info p {
-            margin: 10px 0;
-            font-size: 21px;
+            font-size: 17px;
             color: #5f5057;
+            margin: 0;
         }
 
         .active {
-            color: #13b982;
+            color: #12b985;
         }
 
         .icons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .icon {
-            background: #fff;
-            width: 65px;
-            height: 65px;
+            width: 48px;
+            height: 48px;
+            background: white;
             border-radius: 50%;
             text-align: center;
-            padding-top: 20px;
-            font-size: 25px;
+            line-height: 48px;
+            font-size: 20px;
         }
 
-        /* Appointment */
+
+        /* APPOINTMENT */
 
         .appointment {
-            background: #f5d9ff;
-            padding: 25px;
-            margin-top: 25px;
+            margin: 25px;
+            padding: 20px;
+            background: #f4d9ff;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -125,124 +132,135 @@
 
         .appointment h2 {
             margin: 0;
-            font-size: 23px;
+            font-size: 19px;
         }
 
         .appointment p {
-            margin: 10px 0 0;
-            font-size: 21px;
+            margin: 8px 0 0;
+            font-size: 17px;
             color: #5f5057;
         }
 
         .confirm {
             background: white;
             color: #b72d62;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-size: 19px;
+            padding: 12px 18px;
+            border-radius: 25px;
+            font-size: 16px;
         }
 
-        /* Date */
+
+        /* TODAY */
 
         .date {
             width: 100px;
-            background: white;
-            text-align: center;
-            padding: 12px;
-            border-radius: 30px;
             margin: 35px auto;
-            font-size: 19px;
+            padding: 12px;
+            background: white;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0 2px 8px #eadceb;
         }
 
-        /* Messages */
+
+        /* MESSAGE */
 
         .msg {
             max-width: 80%;
-            padding: 25px;
-            border-radius: 35px;
-            margin-top: 25px;
-            font-size: 24px;
-            line-height: 1.5;
+            padding: 22px;
+            font-size: 22px;
+            line-height: 1.4;
         }
 
         .left {
+            margin-left: 55px;
+            margin-right: 25px;
             background: #f7e5ff;
-            margin-right: auto;
+            border-radius: 30px;
         }
 
         .right {
+            margin-left: 55px;
+            margin-right: 25px;
             background: #ff5e91;
             color: white;
-            margin-left: auto;
+            border-radius: 30px 30px 5px 30px;
         }
 
         .time {
-            font-size: 17px;
+            margin: 8px 0 20px 55px;
+            font-size: 16px;
             color: #5f5057;
-            margin: 8px 0 20px;
         }
 
         .right-time {
             text-align: right;
+            margin-right: 30px;
         }
 
-        /* Quick replies */
+
+        /* QUICK REPLY */
 
         .quick {
             display: flex;
-            gap: 10px;
-            margin-top: 40px;
+            gap: 8px;
+            margin: 40px 25px 25px;
         }
 
         .quick a {
+            flex: 1;
             background: white;
             color: #5f5057;
             text-decoration: none;
-            padding: 15px 25px;
+            text-align: center;
+            padding: 15px 8px;
             border-radius: 30px;
-            font-size: 19px;
+            font-size: 17px;
         }
 
-        /* Message box */
+
+        /* SEND */
 
         .send {
+            margin: 0 15px 20px;
+            padding: 12px;
             background: #fdf0ff;
-            border-radius: 50px;
-            padding: 15px;
-            margin-top: 35px;
+            border-radius: 45px;
             display: flex;
-            gap: 12px;
             align-items: center;
+            gap: 8px;
         }
 
         .photo {
+            width: 52px;
+            height: 52px;
             background: #f4e5ff;
-            width: 65px;
-            height: 65px;
             border-radius: 50%;
             text-align: center;
-            padding-top: 20px;
-            font-size: 22px;
+            line-height: 52px;
+            font-size: 20px;
         }
 
         .send input {
+            min-width: 0;
             flex: 1;
             border: none;
             outline: none;
             background: white;
-            border-radius: 40px;
-            padding: 20px;
-            font-size: 19px;
+            border-radius: 35px;
+            padding: 17px 15px;
+            font-size: 16px;
         }
 
         .send button {
-            width: 65px;
-            height: 65px;
+            width: 52px;
+            height: 52px;
             border: none;
             border-radius: 50%;
             background: #ff5e91;
             color: white;
-            font-size: 25px;
+            font-size: 23px;
         }
     </style>
 </head>
@@ -251,7 +269,7 @@
 
 <div class="page">
 
-    <!-- Header -->
+    <!-- HEADER -->
 
     <div class="top">
 
@@ -260,7 +278,7 @@
         </a>
 
         <div class="title">
-            🐾 Chat Thread
+            Chat Thread
         </div>
 
         <div class="user">
@@ -270,7 +288,7 @@
     </div>
 
 
-    <!-- Clinic -->
+    <!-- CLINIC -->
 
     <div class="clinic">
 
@@ -296,7 +314,7 @@
             </div>
 
             <div class="icon">
-                📅
+                ▣
             </div>
 
         </div>
@@ -304,7 +322,7 @@
     </div>
 
 
-    <!-- Appointment -->
+    <!-- APPOINTMENT -->
 
     <div class="appointment">
 
@@ -327,14 +345,14 @@
     </div>
 
 
-    <!-- Date -->
+    <!-- TODAY -->
 
     <div class="date">
         Today
     </div>
 
 
-    <!-- Doctor message -->
+    <!-- MESSAGE 1 -->
 
     <div class="msg left">
 
@@ -349,7 +367,7 @@
     </div>
 
 
-    <!-- User message -->
+    <!-- MESSAGE 2 -->
 
     <div class="msg right">
 
@@ -363,7 +381,7 @@
     </div>
 
 
-    <!-- Doctor message -->
+    <!-- MESSAGE 3 -->
 
     <div class="msg left">
 
@@ -378,7 +396,7 @@
     </div>
 
 
-    <!-- Quick replies -->
+    <!-- QUICK REPLIES -->
 
     <div class="quick">
 
@@ -393,7 +411,7 @@
     </div>
 
 
-    <!-- Message input -->
+    <!-- MESSAGE INPUT -->
 
     <form class="send">
 

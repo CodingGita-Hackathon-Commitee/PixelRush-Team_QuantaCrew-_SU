@@ -3,6 +3,8 @@
 <head>
     <title>Select Date & Time</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -12,96 +14,97 @@
         }
 
         .page {
-            width: 1200px;
+            width: 100%;
+            max-width: 430px;
             margin: auto;
             min-height: 100vh;
             background: #fff7fb;
         }
 
-        /* TOP BAR */
+        /* TOP */
 
         .top {
-            height: 85px;
+            height: 65px;
             background: white;
             display: flex;
             align-items: center;
-            padding: 0 35px;
-            gap: 25px;
+            padding: 0 15px;
+            gap: 12px;
             border-bottom: 1px solid #eee;
         }
 
         .back {
-            width: 55px;
-            height: 55px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #f8e5ff;
             color: #321b38;
             text-decoration: none;
             text-align: center;
-            line-height: 48px;
-            font-size: 40px;
+            line-height: 36px;
+            font-size: 30px;
         }
 
         .logo {
             color: #d52c6b;
-            font-size: 13px;
+            font-size: 11px;
             font-weight: bold;
         }
 
         .title {
-            font-size: 30px;
+            font-size: 20px;
             font-weight: bold;
         }
 
         .user {
             margin-left: auto;
-            width: 55px;
-            height: 55px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #b91f5c;
             color: white;
             text-align: center;
-            line-height: 55px;
-            font-size: 25px;
+            line-height: 40px;
+            font-size: 20px;
         }
 
         /* MAIN */
 
         .main {
-            padding: 30px 55px 50px;
+            padding: 18px 15px 35px;
         }
 
         /* DOCTOR */
 
         .doctor {
             background: white;
-            border-radius: 40px;
-            padding: 25px 35px;
+            border-radius: 25px;
+            padding: 15px;
             display: flex;
             align-items: center;
             box-shadow: 0 3px 10px #eee;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
 
         .doctor img {
-            width: 95px;
-            height: 95px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             object-fit: cover;
         }
 
         .doctor-info {
-            margin-left: 25px;
+            margin-left: 12px;
         }
 
         .doctor-info h1 {
             margin: 0;
-            font-size: 31px;
+            font-size: 19px;
         }
 
         .doctor-info p {
-            margin: 8px 0 0;
-            font-size: 19px;
+            margin: 6px 0 0;
+            font-size: 12px;
             color: #69596b;
         }
 
@@ -112,21 +115,21 @@
         .buddy {
             background: #ffd9e9;
             color: #b51f5c;
-            padding: 7px 15px;
-            border-radius: 22px;
+            padding: 5px 8px;
+            border-radius: 15px;
             font-weight: bold;
         }
 
         .cloud {
             margin-left: auto;
-            width: 60px;
-            height: 60px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: #fae7ff;
             text-align: center;
-            line-height: 60px;
+            line-height: 42px;
             color: #bd205e;
-            font-size: 28px;
+            font-size: 20px;
         }
 
         /* VISIT TYPE */
@@ -134,19 +137,19 @@
         .visit {
             display: flex;
             background: #f9eaff;
-            border-radius: 40px;
-            padding: 10px;
-            margin-bottom: 35px;
+            border-radius: 25px;
+            padding: 5px;
+            margin-bottom: 20px;
         }
 
         .visit a {
             width: 50%;
-            padding: 20px;
-            border-radius: 35px;
+            padding: 12px 5px;
+            border-radius: 20px;
             text-align: center;
             text-decoration: none;
             color: #5d4c59;
-            font-size: 22px;
+            font-size: 13px;
         }
 
         .visit .active {
@@ -154,29 +157,13 @@
             color: white;
         }
 
-        /* TWO COLUMNS */
-
-        .columns {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-        }
-
-        .left {
-            width: 55%;
-        }
-
-        .right {
-            width: 45%;
-        }
-
-        /* COMMON CARD */
+        /* CARD */
 
         .card {
             background: white;
-            border-radius: 40px;
-            padding: 30px;
-            margin-bottom: 30px;
+            border-radius: 25px;
+            padding: 17px;
+            margin-bottom: 18px;
             box-shadow: 0 3px 10px #eee;
         }
 
@@ -185,68 +172,69 @@
         .month {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 7px;
         }
 
         .month h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 19px;
         }
 
         .week {
             background: #ffdce9;
-            padding: 9px 17px;
-            border-radius: 22px;
+            padding: 5px 8px;
+            border-radius: 15px;
             color: #6e183e;
+            font-size: 10px;
         }
 
         .arrows {
             margin-left: auto;
             display: flex;
-            gap: 10px;
+            gap: 5px;
         }
 
         .arrow {
-            width: 48px;
-            height: 48px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: #fae8ff;
             text-align: center;
-            line-height: 45px;
-            font-size: 25px;
+            line-height: 28px;
+            font-size: 18px;
         }
 
         .days {
             display: flex;
-            gap: 12px;
-            margin-top: 30px;
+            gap: 6px;
+            margin-top: 18px;
         }
 
         .day {
             flex: 1;
-            padding: 20px 8px;
+            padding: 12px 3px;
             background: #faeaff;
-            border-radius: 45px;
+            border-radius: 25px;
             text-align: center;
             color: #6b5a66;
         }
 
         .day p {
-            margin: 0 0 15px;
-            font-size: 18px;
+            margin: 0 0 8px;
+            font-size: 11px;
         }
 
         .day b {
             display: block;
-            font-size: 25px;
+            font-size: 17px;
             color: #321b38;
         }
 
         .day span {
             display: block;
-            margin-top: 15px;
+            margin-top: 8px;
             color: #bd205e;
-            font-size: 20px;
+            font-size: 14px;
         }
 
         .day.active {
@@ -260,22 +248,23 @@
         }
 
         .calendar-bottom {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
-            font-size: 18px;
+            display: block;
+            margin-top: 15px;
+            font-size: 11px;
             color: #665560;
+            line-height: 20px;
         }
 
         .calendar-bottom b {
+            display: block;
             color: #bd205e;
         }
 
         /* TIME */
 
         .time-title {
-            font-size: 25px;
-            margin: 0 0 20px;
+            font-size: 17px;
+            margin: 0 0 12px;
         }
 
         .dot {
@@ -284,17 +273,17 @@
 
         .time-row {
             display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 7px;
+            margin-bottom: 20px;
         }
 
         .time {
             flex: 1;
-            padding: 18px 10px;
+            padding: 12px 4px;
             background: #faeaff;
-            border-radius: 30px;
+            border-radius: 20px;
             text-align: center;
-            font-size: 18px;
+            font-size: 11px;
         }
 
         .time.active {
@@ -312,83 +301,86 @@
 
         .note-head h2 {
             margin: 0;
-            font-size: 24px;
+            font-size: 16px;
         }
 
         .optional {
             color: #6d5b67;
+            font-size: 11px;
         }
 
         .note {
-            margin-top: 20px;
+            margin-top: 15px;
             background: #fcecff;
-            border-radius: 35px;
-            padding: 25px;
-            min-height: 130px;
-            font-size: 20px;
+            border-radius: 20px;
+            padding: 15px;
+            min-height: 90px;
+            font-size: 13px;
             line-height: 1.5;
         }
 
         .count {
             text-align: right;
             color: #bd205e;
-            margin-top: 15px;
+            margin-top: 10px;
+            font-size: 11px;
         }
 
         /* CANCELLATION */
 
         .cancel {
             background: #ffe5ef;
-            border-radius: 40px;
-            padding: 25px;
+            border-radius: 25px;
+            padding: 15px;
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
 
         .bell {
-            width: 55px;
-            height: 55px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             background: #ffd5e4;
             text-align: center;
-            line-height: 55px;
-            font-size: 25px;
-            margin-right: 20px;
+            line-height: 42px;
+            font-size: 20px;
+            margin-right: 12px;
         }
 
         .cancel h2 {
             margin: 0;
-            font-size: 20px;
+            font-size: 14px;
             color: #5e1237;
         }
 
         .cancel p {
             margin: 5px 0 0;
             color: #9d345e;
-            font-size: 18px;
+            font-size: 11px;
+            line-height: 16px;
         }
 
         /* CONFIRM */
 
         .confirm {
             display: block;
-            padding: 21px;
+            padding: 16px;
             background: #ff5b87;
-            border-radius: 40px;
+            border-radius: 25px;
             color: white;
             text-align: center;
             text-decoration: none;
-            font-size: 22px;
+            font-size: 15px;
             font-weight: bold;
             box-shadow: 0 8px 20px #ffd0dd;
         }
 
         .secure {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
             color: #665560;
-            font-size: 17px;
+            font-size: 10px;
         }
 
         .secure b {
@@ -460,168 +452,36 @@
         <div class="visit">
 
             <a class="active" href="11_dates.html">
-                ▣ &nbsp; In-Clinic Visit
+                ▣ &nbsp; In-Clinic
             </a>
 
             <a href="11_dates.html">
-                ▣ &nbsp; Video Vet Call
+                ▣ &nbsp; Video Call
             </a>
 
         </div>
 
 
-        <div class="columns">
+        <!-- CALENDAR -->
 
-            <!-- LEFT -->
+        <div class="card">
 
-            <div class="left">
+            <div class="month">
 
-                <!-- CALENDAR -->
+                <h1>October 2025</h1>
 
-                <div class="card">
+                <span class="week">
+                    Week 3
+                </span>
 
-                    <div class="month">
+                <div class="arrows">
 
-                        <h1>October 2025</h1>
-
-                        <span class="week">
-                            Week 3
-                        </span>
-
-                        <div class="arrows">
-
-                            <div class="arrow">
-                                ‹
-                            </div>
-
-                            <div class="arrow">
-                                ›
-                            </div>
-
-                        </div>
-
+                    <div class="arrow">
+                        ‹
                     </div>
 
-
-                    <div class="days">
-
-                        <div class="day">
-
-                            <p>Mon</p>
-
-                            <b>13</b>
-
-                            <span>♣</span>
-
-                        </div>
-
-
-                        <div class="day">
-
-                            <p>Tue</p>
-
-                            <b>14</b>
-
-                            <span>♣</span>
-
-                        </div>
-
-
-                        <div class="day">
-
-                            <p>Wed</p>
-
-                            <b>15</b>
-
-                            <span>⊘</span>
-
-                        </div>
-
-
-                        <div class="day active">
-
-                            <p>Thu</p>
-
-                            <b>16</b>
-
-                            <span>♣</span>
-
-                        </div>
-
-
-                        <div class="day">
-
-                            <p>Fri</p>
-
-                            <b>17</b>
-
-                            <span>♣</span>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="calendar-bottom">
-
-                        <span>
-                            🐾 Paws indicate open slots
-                        </span>
-
-                        <b>
-                            Thursday, Oct 16
-                        </b>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TIME -->
-
-                <div class="card">
-
-                    <h2 class="time-title">
-                        <span class="dot">●</span>
-                        Morning Slots
-                    </h2>
-
-                    <div class="time-row">
-
-                        <div class="time">
-                            09:00 AM
-                        </div>
-
-                        <div class="time active">
-                            ✓ 10:30 AM
-                        </div>
-
-                        <div class="time">
-                            11:15 AM
-                        </div>
-
-                    </div>
-
-
-                    <h2 class="time-title">
-                        <span style="color:#bd205e;">●</span>
-                        Afternoon Slots
-                    </h2>
-
-                    <div class="time-row">
-
-                        <div class="time">
-                            02:00 PM
-                        </div>
-
-                        <div class="time">
-                            03:30 PM
-                        </div>
-
-                        <div class="time">
-                            04:45 PM
-                        </div>
-
+                    <div class="arrow">
+                        ›
                     </div>
 
                 </div>
@@ -629,80 +489,196 @@
             </div>
 
 
-            <!-- RIGHT -->
+            <div class="days">
 
-            <div class="right">
+                <div class="day">
 
-                <!-- NOTE -->
+                    <p>Mon</p>
 
-                <div class="card">
+                    <b>13</b>
 
-                    <div class="note-head">
-
-                        <h2>
-                            📝 Note for Doctor & Staff
-                        </h2>
-
-                        <span class="optional">
-                            Optional
-                        </span>
-
-                    </div>
-
-
-                    <div class="note">
-
-                        Buddy gets nervous with
-                        stethoscopes, please have a treat
-                        ready! 🐾
-
-                        <div class="count">
-                            64/150
-                        </div>
-
-                    </div>
+                    <span>♣</span>
 
                 </div>
 
 
-                <!-- CANCELLATION -->
+                <div class="day">
 
-                <div class="cancel">
+                    <p>Tue</p>
 
-                    <div class="bell">
-                        ♧
-                    </div>
+                    <b>14</b>
 
-                    <div>
-
-                        <h2>
-                            Free Cancellation up to 2h before
-                        </h2>
-
-                        <p>
-                            We will send a reminder notification
-                            on WhatsApp!
-                        </p>
-
-                    </div>
+                    <span>♣</span>
 
                 </div>
 
 
-                <!-- CONFIRM -->
+                <div class="day">
 
-                <a class="confirm" href="13_receipt.html">
-                    ✿ &nbsp; Confirm Appointment ($45)
-                </a>
+                    <p>Wed</p>
+
+                    <b>15</b>
+
+                    <span>⊘</span>
+
+                </div>
 
 
-                <div class="secure">
-                    <b>♙</b>
-                    Encrypted booking powered by PawPal Health
+                <div class="day active">
+
+                    <p>Thu</p>
+
+                    <b>16</b>
+
+                    <span>♣</span>
+
+                </div>
+
+
+                <div class="day">
+
+                    <p>Fri</p>
+
+                    <b>17</b>
+
+                    <span>♣</span>
+
                 </div>
 
             </div>
 
+
+            <div class="calendar-bottom">
+
+                <span>
+                    🐾 Paws indicate open slots
+                </span>
+
+                <b>
+                    Thursday, Oct 16
+                </b>
+
+            </div>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="card">
+
+            <h2 class="time-title">
+                <span class="dot">●</span>
+                Morning Slots
+            </h2>
+
+            <div class="time-row">
+
+                <div class="time">
+                    09:00 AM
+                </div>
+
+                <div class="time active">
+                    ✓ 10:30 AM
+                </div>
+
+                <div class="time">
+                    11:15 AM
+                </div>
+
+            </div>
+
+
+            <h2 class="time-title">
+                <span class="dot">●</span>
+                Afternoon Slots
+            </h2>
+
+            <div class="time-row">
+
+                <div class="time">
+                    02:00 PM
+                </div>
+
+                <div class="time">
+                    03:30 PM
+                </div>
+
+                <div class="time">
+                    04:45 PM
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTE -->
+
+        <div class="card">
+
+            <div class="note-head">
+
+                <h2>
+                    📝 Note for Doctor & Staff
+                </h2>
+
+                <span class="optional">
+                    Optional
+                </span>
+
+            </div>
+
+
+            <div class="note">
+
+                Buddy gets nervous with
+                stethoscopes, please have a treat
+                ready! 🐾
+
+                <div class="count">
+                    64/150
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CANCELLATION -->
+
+        <div class="cancel">
+
+            <div class="bell">
+                ♧
+            </div>
+
+            <div>
+
+                <h2>
+                    Free Cancellation up to 2h before
+                </h2>
+
+                <p>
+                    We will send a reminder notification
+                    on WhatsApp!
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONFIRM -->
+
+        <a class="confirm" href="13_receipt.html">
+            ✿ &nbsp; Confirm Appointment ($45)
+        </a>
+
+
+        <div class="secure">
+            <b>♙</b>
+            Encrypted booking powered by PawPal Health
         </div>
 
     </div>
